@@ -102,55 +102,52 @@
         [dir="rtl"] .text-right { text-align: left !important; }
         [dir="rtl"] .tm-nav .nav-link { padding-right: 20px; padding-left: 0; }
         html[lang="ar"] .tm-text-container,
-    html[lang="ar"] .media-body,
-    html[lang="ar"] .tm-about-text,
-    html[lang="ar"] .tm-contact-form,
-    html[lang="ar"] address,
-    html[lang="ar"] .tm-contact-links a,
-    html[lang="ar"] h2,
-    html[lang="ar"] p,
-    html[lang="ar"] span[data-key],
-    html[lang="ar"] .nav-link span,
-    html[lang="ar"] .tm-gallery-item figcaption h2,
-    html[lang="ar"] .tm-gallery-item figcaption a,
-    html[lang="ar"] .tm-lang-option,
-    html[lang="ar"] input,
-    html[lang="ar"] textarea,
-    html[lang="ar"] select,
-    html[lang="ar"] .tm-about-title,
-    html[lang="ar"] .tm-about-subtitle {
-        direction: rtl;
-        text-align: right;
-    }
-
-    /* Optional: Adjust padding/margins for icons in media (keep icon on left, text right-aligned) */
+        html[lang="ar"] .media-body,
+        html[lang="ar"] .tm-about-text,
+        html[lang="ar"] .tm-contact-form,
+        html[lang="ar"] address,
+        html[lang="ar"] .tm-contact-links a,
+        html[lang="ar"] h2,
+        html[lang="ar"] p,
+        html[lang="ar"] span[data-key],
+        html[lang="ar"] .nav-link span,
+        html[lang="ar"] .tm-gallery-item figcaption h2,
+        html[lang="ar"] .tm-gallery-item figcaption a,
+        html[lang="ar"] .tm-lang-option,
+        html[lang="ar"] input,
+        html[lang="ar"] textarea,
+        html[lang="ar"] select,
+        html[lang="ar"] .tm-about-title,
+        html[lang="ar"] .tm-about-subtitle {
+          direction: rtl;
+          text-align: right;
+        }
+        /* Optional: Adjust padding/margins for icons in media (keep icon on left, text right-aligned) */
         html[lang="ar"] .media {
-        display: flex;
-        align-items: flex-start;
-    }
-    html[lang="ar"] .media .tm-post-icon {
-        order: 0; /* Keep icon on left */
-    margin-right: 15px; /* Adjust spacing */
-        margin-left: 0;
-    }
-    html[lang="ar"] .media-body {
-        order: 1;
-    }
-
-    /* Keep floating icons on right, even in Arabic */
-    html[lang="ar"] .tm-floating-icons {
-        left: auto;
-        right: 20px;
-    }
-
-    /* Override any existing RTL rules that might flip things */
-    html[lang="ar"] .text-right {
-        text-align: right !important; /* Keep as is, or change to left if needed */
-    }
-    html[lang="ar"] .tm-nav .nav-link {
-        padding-left: 20px;
-        padding-right: 0;
-    }
+          display: flex;
+          align-items: flex-start;
+        }
+        html[lang="ar"] .media .tm-post-icon {
+          order: 0; /* Keep icon on left */
+          margin-right: 15px; /* Adjust spacing */
+          margin-left: 0;
+        }
+        html[lang="ar"] .media-body {
+          order: 1;
+        }
+        /* Keep floating icons on right, even in Arabic */
+        html[lang="ar"] .tm-floating-icons {
+          left: auto;
+          right: 20px;
+        }
+        /* Override any existing RTL rules that might flip things */
+        html[lang="ar"] .text-right {
+          text-align: right !important; /* Keep as is, or change to left if needed */
+        }
+        html[lang="ar"] .tm-nav .nav-link {
+          padding-left: 20px;
+          padding-right: 0;
+        }
     </style>
 </head>
 <body data-theme="light" dir="ltr">
@@ -880,13 +877,13 @@
     <script src="slick/slick.min.js"></script>
     <script src="js/templatemo-script.js"></script>
     <script>
-    let translations;
-        fetch('translations.json')
-           .then(response => response.json())
+        let translations;
+        fetch('translations.json?v=' + new Date().getTime()) // Cache busting
+            .then(response => response.json())
             .then(data => {
                 translations = data;
-               // Apply the default language after loading
-              const currentLang = localStorage.getItem("lang") || "fr";
+                // Apply the default language after loading
+                const currentLang = localStorage.getItem("lang") || "fr";
                 applyLanguage(currentLang);
             })
             .catch(error => console.error('Error loading translations:', error));
@@ -894,58 +891,60 @@
         document.addEventListener("DOMContentLoaded", () => {
             const langToggle = document.getElementById("langToggle");
             const langMenu = document.getElementById("langMenu");
-          const themeToggle = document.getElementById("themeToggle");
+            const themeToggle = document.getElementById("themeToggle");
 
-          langToggle.addEventListener("click", () => {
-            langMenu.classList.toggle("show");
-        });
-
-        document.querySelectorAll(".tm-lang-option").forEach(opt => {
-            opt.addEventListener("click", () => {
-                const lang = opt.dataset.lang;
-                applyLanguage(lang);
-                localStorage.setItem("lang", lang);
-                langMenu.classList.remove("show");
+            langToggle.addEventListener("click", () => {
+                langMenu.classList.toggle("show");
             });
-        });
 
-        document.addEventListener("click", (e) => {
-            if (!langToggle.contains(e.target) && !langMenu.contains(e.target)) {
-                langMenu.classList.remove("show");
+            document.querySelectorAll(".tm-lang-option").forEach(opt => {
+                opt.addEventListener("click", () => {
+                    const lang = opt.dataset.lang;
+                    applyLanguage(lang);
+                    localStorage.setItem("lang", lang);
+                    langMenu.classList.remove("show");
+                });
+            });
+
+            document.addEventListener("click", (e) => {
+                if (!langToggle.contains(e.target) && !langMenu.contains(e.target)) {
+                    langMenu.classList.remove("show");
+                }
+            });
+
+            const savedTheme = localStorage.getItem("theme") || "light";
+            document.body.setAttribute("data-theme", savedTheme);
+            updateThemeIcon(savedTheme);
+
+            themeToggle.addEventListener("click", () => {
+                const newTheme = document.body.getAttribute("data-theme") === "light" ? "dark" : "light";
+                document.body.setAttribute("data-theme", newTheme);
+                localStorage.setItem("theme", newTheme);
+                updateThemeIcon(newTheme);
+            });
+
+            function updateThemeIcon(theme) {
+                themeToggle.innerHTML = theme === "dark" ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+            }
+
+            function applyLanguage(lang) {
+                if (!translations) return; // Wait for JSON to load if not ready
+
+                document.querySelectorAll("[data-key]").forEach(el => {
+                    const key = el.dataset.key;
+                    if (translations[lang][key]) {
+                        if (key === 'contact_address') {
+                            el.innerHTML = translations[lang][key].replace(/\n/g, '<br>');
+                        } else {
+                            el.textContent = translations[lang][key];
+                        }
+                    }
+                });
+
+                document.documentElement.lang = lang === "ar" ? "ar" : "en";
+                document.body.style.direction = lang === "ar" ? "rtl" : "ltr";
             }
         });
-
-        const savedTheme = localStorage.getItem("theme") || "light";
-        document.body.setAttribute("data-theme", savedTheme);
-        updateThemeIcon(savedTheme);
-
-        themeToggle.addEventListener("click", () => {
-            const newTheme = document.body.getAttribute("data-theme") === "light" ? "dark" : "light";
-            document.body.setAttribute("data-theme", newTheme);
-            localStorage.setItem("theme", newTheme);
-            updateThemeIcon(newTheme);
-        });
-
-        function updateThemeIcon(theme) {
-            themeToggle.innerHTML = theme === "dark" ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-        }
-
-    function applyLanguage(lang) {
-        if (!translations) return;
-        document.querySelectorAll("[data-key]").forEach(el => {
-            const key = el.dataset.key;
-            if (translations[lang][key]) {
-                if (key === 'contact_address') {
-                   el.innerHTML = translations[lang][key].replace(/\n/g, '<br>');
-                } else {
-                    el.textContent = translations[lang][key];
-                }
-    }
-  });
-  document.documentElement.lang = lang;
-  document.body.style.direction = "ltr";
-}
-    });
-</script>
+    </script>
 </body>
 </html>
