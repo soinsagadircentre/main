@@ -873,77 +873,73 @@
     <script src="slick/slick.min.js"></script>
     <script src="js/templatemo-script.js"></script>
     <script>
-        let translations;
-        fetch('translations.json?v=' + new Date().getTime())
-            .then(response => {
-                console.log('Fetch response status:', response.status); // Log status to check if 200 OK
-                return response.json();
-            })
-            .then(data => {
-                translations = data;
-                console.log('Translations loaded successfully:', translations); // Log to confirm data
-                const currentLang = localStorage.getItem("lang") || "fr";
-                applyLanguage(currentLang);
-            })
-            .catch(error => console.error('Fetch error:', error)); // Log any errors
+    let translations;
 
-        document.addEventListener("DOMContentLoaded", () => {
-            const langToggle = document.getElementById("langToggle");
-            const langMenu = document.getElementById("langMenu");
-            const themeToggle = document.getElementById("themeToggle");
-
-            langToggle.addEventListener("click", () => {
-                langMenu.classList.toggle("show");
-            });
-
-            document.querySelectorAll(".tm-lang-option").forEach(opt => {
-                opt.addEventListener("click", () => {
-                    const lang = opt.dataset.lang;
-                    applyLanguage(lang);
-                    localStorage.setItem("lang", lang);
-                    langMenu.classList.remove("show");
-                });
-            });
-
-            document.addEventListener("click", (e) => {
-                if (!langToggle.contains(e.target) && !langMenu.contains(e.target)) {
-                    langMenu.classList.remove("show");
+    // Define applyLanguage outside so it's in global scope
+    function applyLanguage(lang) {
+        if (!translations) return;
+        document.querySelectorAll("[data-key]").forEach(el => {
+            const key = el.dataset.key;
+            if (translations[lang][key]) {
+                if (key === 'contact_address') {
+                    el.innerHTML = translations[lang][key].replace(/\n/g, '<br>');
+                } else {
+                    el.textContent = translations[lang][key];
                 }
-            });
-
-            const savedTheme = localStorage.getItem("theme") || "light";
-            document.body.setAttribute("data-theme", savedTheme);
-            updateThemeIcon(savedTheme);
-
-            themeToggle.addEventListener("click", () => {
-                const newTheme = document.body.getAttribute("data-theme") === "light" ? "dark" : "light";
-                document.body.setAttribute("data-theme", newTheme);
-                localStorage.setItem("theme", newTheme);
-                updateThemeIcon(newTheme);
-            });
-
-            function updateThemeIcon(theme) {
-                themeToggle.innerHTML = theme === "dark" ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-            }
-
-            function applyLanguage(lang) {
-                if (!translations) return; // Wait for JSON to load if not ready
-
-                document.querySelectorAll("[data-key]").forEach(el => {
-                    const key = el.dataset.key;
-                    if (translations[lang][key]) {
-                        if (key === 'contact_address') {
-                            el.innerHTML = translations[lang][key].replace(/\n/g, '<br>');
-                        } else {
-                            el.textContent = translations[lang][key];
-                        }
-                    }
-                });
-
-                document.documentElement.lang = lang === "ar" ? "ar" : "en";
-                document.body.style.direction = lang === "ar" ? "rtl" : "ltr";
             }
         });
-    </script>
+        document.documentElement.lang = lang === "ar" ? "ar" : "en";
+        document.body.style.direction = lang === "ar" ? "rtl" : "ltr";
+    }
+
+    fetch('translations.json?v=' + new Date().getTime())
+        .then(response => response.json())
+        .then(data => {
+            translations = data;
+            const currentLang = localStorage.getItem("lang") || "fr";
+            applyLanguage(currentLang);
+        })
+        .catch(error => console.error('Error loading translations:', error));
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const langToggle = document.getElementById("langToggle");
+        const langMenu = document.getElementById("langMenu");
+        const themeToggle = document.getElementById("themeToggle");
+
+        langToggle.addEventListener("click", () => {
+            langMenu.classList.toggle("show");
+        });
+
+        document.querySelectorAll(".tm-lang-option").forEach(opt => {
+            opt.addEventListener("click", () => {
+                const lang = opt.dataset.lang;
+                applyLanguage(lang);
+                localStorage.setItem("lang", lang);
+                langMenu.classList.remove("show");
+            });
+        });
+
+        document.addEventListener("click", (e) => {
+            if (!langToggle.contains(e.target) && !langMenu.contains(e.target)) {
+                langMenu.classList.remove("show");
+            }
+        });
+
+        const savedTheme = localStorage.getItem("theme") || "light";
+        document.body.setAttribute("data-theme", savedTheme);
+        updateThemeIcon(savedTheme);
+
+        themeToggle.addEventListener("click", () => {
+            const newTheme = document.body.getAttribute("data-theme") === "light" ? "dark" : "light";
+            document.body.setAttribute("data-theme", newTheme);
+            localStorage.setItem("theme", newTheme);
+            updateThemeIcon(newTheme);
+        });
+
+        function updateThemeIcon(theme) {
+            themeToggle.innerHTML = theme === "dark" ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        }
+    });
+</script>
 </body>
 </html>
