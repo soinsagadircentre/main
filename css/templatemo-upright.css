@@ -127,14 +127,16 @@ hr { border-top: 4px solid #CCC; }
 .navbar-toggler { display: none; }
 
 .tm-brand-box {
-	width: 240px;
+    width: 240px;
     height: 180px;
     background: #006699;
     color: white;
     display: flex;
     align-items: center;
-	justify-content: center;
-	margin-bottom: 100px;
+    justify-content: center;
+    margin-bottom: 100px;
+    padding: 30px; /* Creates space for logo */
+    background-clip: content-box; /* Blue only around edges */
 }
 
 #tm-main-nav {

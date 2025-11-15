@@ -231,8 +231,8 @@
                     </button>
                     <div>
                         <h1 class="tm-brand" data-key="brand">
-                            <img src="img/agadir.png" alt="Soins Agadir Center" style="height: 40px; width: auto;">
-                        </h1>          
+                            <img src="img/agadir.png" alt="Soins Agadir Center" style="height: 230px; width: auto; display: block; margin: 0 auto;">
+                        </h1>         
                         <ul id="tm-main-nav">
                             <li class="nav-item">                                
                                 <a href="#home" class="nav-link current">
@@ -947,13 +947,17 @@
             langMenu.classList.toggle("show");
         });
 
-        document.querySelectorAll(".tm-lang-option").forEach(opt => {
-            opt.addEventListener("click", () => {
-                const lang = opt.dataset.lang;
-                applyLanguage(lang);
-                localStorage.setItem("lang", lang);
-                langMenu.classList.remove("show");
-            });
+        document.querySelectorAll("[data-key]").forEach(el => {
+            const key = el.dataset.key;
+            if (translations[lang][key]) {
+                // Special case: brand logo should NOT be replaced with text
+                if (key === "brand" && el.querySelector('img')) {
+                    // Only update the alt attribute for accessibility
+                    el.querySelector('img').setAttribute('alt', translations[lang][key]);
+                } else {
+                    el.textContent = translations[lang][key];
+                }
+            }
         });
 
         document.addEventListener("click", (e) => {
