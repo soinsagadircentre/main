@@ -161,7 +161,7 @@
       margin-bottom: 1rem !important;
       border: none !important;
       box-shadow: none !important;
-      background: var(--bg) !important;
+      background: transparent !important;
     }
     #home .tm-text-container p {
       text-align: center !important;
@@ -171,7 +171,7 @@
       flex-direction: column !important;
       align-items: center !important;
       padding: 0 !important;
-      background: var(--bg) !important;
+      background: transparent !important;
     }
     #home .tm-post-icon {
       margin-right: 0 !important;
@@ -184,7 +184,7 @@
       text-align: center !important;
     }
     #home .tm-text-container {
-      background: var(--bg) !important;
+      background: transparent !important;
     }
     </style>
 </head>
