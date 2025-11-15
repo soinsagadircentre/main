@@ -272,7 +272,6 @@
                         <hr class="mb-5">
                         <div class="row">
                             <div class="col-lg-6 tm-col-home mb-4">
-                                <div class="tm-text-container">
                                     <div class="tm-icon-container mb-5 mr-0 ml-auto">
                                         <i class="fas fa-clinic-medical fa-4x tm-text-primary"></i>
                                     </div>                                
@@ -283,14 +282,11 @@
                                     <p data-key="home_p2">
                                         Located at 94, Rue El Farabi, Bloc E8, Cité Dakhla, Agadir, we are here to support your health 
                                         and well-being with personalized, high-quality care.
-                                    </p>
-                                </div>                                
+                                    </p>                              
                             </div>
                             <div class="col-lg-6 tm-col-home mb-4">
-                                <div class="tm-text-container">
                                     <div class="tm-icon-container mb-5 mr-0 ml-auto">
-                                        <i class="fas fa-heartbeat fa-4x tm-text-primary"></i>
-                                    </div>                                 
+                                        <i class="fas fa-heartbeat fa-4x tm-text-primary"></i>                               
                                     <p data-key="home_p3">
                                         Our team of qualified nurses and doctors ensures safe, effective, and compassionate care 
                                         tailored to your needs — whether at home or in our modern clinic.
