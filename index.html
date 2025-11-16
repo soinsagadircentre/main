@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="slick/slick-theme.css">
     <link rel="stylesheet" href="css/templatemo-upright.css">
     <style>
-        
         :root {
             --primary: #00a8a8;
             --text: #333;
@@ -39,7 +38,6 @@
         .tm-gallery-item figcaption, .tm-post-link { color: #fff; }
         .tm-section, .tm-section-wrap { background: var(--bg); }
         hr { border-color: var(--hr); }
-        
         .tm-carousel-item, .tm-text-container, .media { background: var(--card-bg); }
         .tm-brand-box, #tm-sidebar { background: rgba(0,0,0,0.05); }
         [data-theme="dark"] .tm-brand-box, [data-theme="dark"] #tm-sidebar { background: rgba(0,0,0,0.3); }
@@ -156,103 +154,6 @@
     address {
         white-space: pre-line; /* Preserves \n as line breaks */
     }
-    #home .tm-icon-container {
-      margin-left: auto !important;
-      margin-right: auto !important;
-      width: fit-content !important;
-      margin-bottom: 1rem !important;
-      border: none !important;
-      box-shadow: none !important;
-      background: transparent !important;
-    }
-    #home .tm-text-container p {
-      text-align: center !important;
-    }
-    #home .media {
-      justify-content: center !important;
-      flex-direction: column !important;
-      align-items: center !important;
-      padding: 0 !important;
-      background: transparent !important;
-    }
-    #home .tm-post-icon {
-      margin-right: 0 !important;
-      margin-bottom: 15px !important;
-    }
-    #home .media-body {
-      text-align: center !important;
-    }
-    #home .text-right {
-      text-align: center !important;
-    }
-    #home .tm-text-container {
-      background: transparent !important;
-    }
-    [data-theme="dark"] #home .tm-text-container {
-      background: transparent !important;
-    }
-    [data-theme="dark"] #home .media {
-      background: transparent !important;
-    }
-    [data-theme="dark"] #home .tm-carousel-item {
-      background: transparent !important;
-    }
-    [data-theme="dark"] #home .tm-icon-container {
-      background: transparent !important;
-    }
-    /* === FINAL LOGO FIX: NO BLUE BOX, SMALL LOGO, NO BREAKAGE === */
-.tm-brand-box {
-    background: transparent !important;
-    padding-top: 0px !important;
-    padding-bottom: 10px !important;
-    margin-bottom: 15px !important;
-    height: auto !important;
-    min-height: 10px !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-}
-
-.tm-brand-logo img {
-    height: 170px !important;   /* ← YOUR DESIRED SIZE */
-    width: auto !important;
-    display: block !important;
-    margin: 0 auto !important;
-}
-/* === SERVICES: PUSHED RIGHT, NO IMAGE, NO GAP === */
-.tm-row-home {
-    display: flex !important;
-    justify-content: flex-end !important;   /* Pushes everything to the right */
-    padding: 0 120px !important;             /* Breathing room from left */
-    gap: 20px !important;
-    flex-wrap: wrap !important;
-}
-
-.tm-col-home.tm-col-home-l {
-    flex: 0 0 auto !important;
-    max-width: 850px !important;
-    width: auto !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-}
-
-/* Hide the empty image column completely */
-.tm-col-home.mr-0.ml-auto {
-    display: none !important;
-}
-
-/* Clean spacing between services */
-.media {
-    margin-bottom: 22px !important;
-    padding-bottom: 18px !important;
-    border-bottom: 1px solid var(--hr) !important;
-}
-
-.media:last-child {
-    border-bottom: none !important;
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-}
     </style>
 </head>
 <body data-theme="light" dir="ltr">
@@ -286,10 +187,8 @@
                     </button>
                     <div>
                         <div class="tm-brand-box">
-                            <div class="tm-brand-logo">
-                                <img src="img/agadir.png" alt="Soins Agadir Center" style="height: 230px; width: auto; display: block; margin: 1 auto;">
-                            </div>
-                        </div>     
+                            <h1 class="tm-brand" data-key="brand">Soins Agadir Center</h1>
+                        </div>                
                         <ul id="tm-main-nav">
                             <li class="nav-item">                                
                                 <a href="#home" class="nav-link current">
@@ -449,10 +348,10 @@
                         </ul>
                         <div class="tm-gallery">
                             <figure class="effect-honey tm-gallery-item home-care">
-                                <img src="img/gallery/tn/eclat.jpg" alt="Image"/>
+                                <img src="img/gallery/tn/injection-01.jpg" alt="Image"/>
                                 <figcaption>
                                     <h2><i data-key="gal_injection">Injection à Domicile</i></h2>
-                                    <a href="img/gallery/eclat.jpg">View more</a>						
+                                    <a href="img/gallery/injection-01.jpg">View more</a>						
                                 </figcaption>			
                             </figure>
                             <figure class="effect-honey tm-gallery-item aesthetic">
@@ -711,13 +610,34 @@
                             </div>
                             <div class="tm-col-about tm-col-about-r">
                                 <img src="img/img-about-01.jpg" alt="Image" class="img-fluid mb-5 tm-img-about">
+                                <p data-key="about_p4">
+                                    From routine injections to complex wound care and rejuvenating skin treatments, we bring 
+                                    professional healthcare directly to you — with compassion, precision, and respect.
+                                </p>
                             </div>
                         </div>
                         <div class="mt-5">
                             <div class="tm-carousel">
                                 <div class="tm-carousel-item">
                                     <figure class="effect-honey mb-4">
-                                        <img src="img/staff1.jpg" alt="Image">
+                                        <img src="img/about-01.jpg" alt="Image">
+                                        <figcaption>
+                                            <ul class="tm-social">
+                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
+                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
+                                            </ul>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="tm-about-text">
+                                        <h3 class="mb-3 tm-text-primary tm-about-title" data-key="team_1_name">Dr. Amina El Amrani</h3>
+                                        <p data-key="team_1_desc">Medical Director with over 15 years in nursing and aesthetic medicine. Specialist in PRP and regenerative therapies.</p>
+                                        <h4 class="tm-text-secondary tm-about-subtitle" data-key="team_1_role">Medical Director</h4>
+                                    </div>
+                                </div>
+                                <div class="tm-carousel-item">
+                                    <figure class="effect-honey mb-4">
+                                        <img src="img/about-02.jpg" alt="Image">
                                         <figcaption>
                                             <ul class="tm-social">
                                                 <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
@@ -729,12 +649,12 @@
                                     <div class="tm-about-text">
                                         <h3 class="mb-3 tm-text-primary tm-about-title" data-key="team_2_name">Nadia Benali</h3>
                                         <p data-key="team_2_desc">Head Nurse with expertise in home care, wound management, and patient education. Fluent in Arabic, French, and English.</p>
-                                        <h4 class="tm-text-secondary tm-about-subtitle" data-key="team_2_role">Director</h4>
+                                        <h4 class="tm-text-secondary tm-about-subtitle" data-key="team_2_role">Head of Nursing</h4>
                                     </div>
                                 </div>
                                 <div class="tm-carousel-item">
                                     <figure class="effect-honey mb-4">
-                                        <img src="img/staff3.jpg" alt="Image">
+                                        <img src="img/about-03.jpg" alt="Image">
                                         <figcaption>
                                             <ul class="tm-social">
                                                 <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
@@ -751,7 +671,7 @@
                                 </div>
                                 <div class="tm-carousel-item">
                                     <figure class="effect-honey mb-4">
-                                        <img src="img/staff4.jpg" alt="Image">
+                                        <img src="img/about-01.jpg" alt="Image">
                                         <figcaption>
                                             <ul class="tm-social">
                                                 <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
@@ -762,13 +682,13 @@
                                     </figure>
                                     <div class="tm-about-text">
                                         <h3 class="mb-3 tm-text-primary tm-about-title" data-key="team_4_name">Fatima Zahra</h3>
-                                        <p data-key="team_4_desc">Senior Nurse specializing in diabetic care, IV therapy, and post-surgical recovery. Known for her gentle approach.<br><br></p>
+                                        <p data-key="team_4_desc">Senior Nurse specializing in diabetic care, IV therapy, and post-surgical recovery. Known for her gentle approach.</p>
                                         <h4 class="tm-text-secondary tm-about-subtitle" data-key="team_4_role">Senior Nurse</h4>
                                     </div>
                                 </div>
                                 <div class="tm-carousel-item">
                                     <figure class="effect-honey mb-4">
-                                        <img src="img/staff5.jpg" alt="Image">
+                                        <img src="img/about-02.jpg" alt="Image">
                                         <figcaption>
                                             <ul class="tm-social">
                                                 <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
@@ -779,13 +699,13 @@
                                     </figure>
                                     <div class="tm-about-text">
                                         <h3 class="mb-3 tm-text-primary tm-about-title" data-key="team_5_name">Sara Lahlou</h3>
-                                        <p data-key="team_5_desc">Clinic Coordinator ensuring smooth operations, appointment scheduling, and patient follow-up with care.<br><br></p>
+                                        <p data-key="team_5_desc">Clinic Coordinator ensuring smooth operations, appointment scheduling, and patient follow-up with care.</p>
                                         <h4 class="tm-text-secondary tm-about-subtitle" data-key="team_5_role">Clinic Coordinator</h4>
                                     </div>
                                 </div>
                                 <div class="tm-carousel-item">
                                     <figure class="effect-honey mb-4">
-                                        <img src="img/staff8.jpg" alt="Image">
+                                        <img src="img/about-03.jpg" alt="Image">
                                         <figcaption>
                                             <ul class="tm-social">
                                                 <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
@@ -796,13 +716,13 @@
                                     </figure>
                                     <div class="tm-about-text">
                                         <h3 class="mb-3 tm-text-primary tm-about-title" data-key="team_6_name">Omar Tazi</h3>
-                                        <p data-key="team_6_desc">Logistics and Home Visit Supervisor. Ensures timely, safe, and fully equipped medical visits across Agadir.<br><br></p>
-                                        <h4 class="tm-text-secondary tm-about-subtitle" data-key="team_6_role">Home Care Sup.</h4>
+                                        <p data-key="team_6_desc">Logistics and Home Visit Supervisor. Ensures timely, safe, and fully equipped medical visits across Agadir.</p>
+                                        <h4 class="tm-text-secondary tm-about-subtitle" data-key="team_6_role">Home Care Supervisor</h4>
                                     </div>
                                 </div>
                                 <div class="tm-carousel-item">
                                     <figure class="effect-honey mb-4">
-                                        <img src="img/staff6.jpg" alt="Image">
+                                        <img src="img/about-01.jpg" alt="Image">
                                         <figcaption>
                                             <ul class="tm-social">
                                                 <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
@@ -813,13 +733,13 @@
                                     </figure>
                                     <div class="tm-about-text">
                                         <h3 class="mb-3 tm-text-primary tm-about-title" data-key="team_7_name">Laila Idrissi</h3>
-                                        <p data-key="team_7_desc">PRP and Hair Restoration Expert. Helped hundreds regain confidence with natural hair regrowth with PRP.<br><br></p>
+                                        <p data-key="team_7_desc">PRP and Hair Restoration Expert. Helped hundreds regain confidence with natural hair regrowth with PRP.</p>
                                         <h4 class="tm-text-secondary tm-about-subtitle" data-key="team_7_role">PRP Specialist</h4>
                                     </div>
                                 </div>
                                 <div class="tm-carousel-item">
                                     <figure class="effect-honey mb-4">
-                                        <img src="img/staff9.jpg" alt="Image">
+                                        <img src="img/about-02.jpg" alt="Image">
                                         <figcaption>
                                             <ul class="tm-social">
                                                 <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
@@ -830,13 +750,13 @@
                                     </figure>
                                     <div class="tm-about-text">
                                         <h3 class="mb-3 tm-text-primary tm-about-title" data-key="team_8_name">Youssef Alami</h3>
-                                        <p data-key="team_8_desc">IT and Digital Health Manager. Implements teleconsultation and digital patient records for better care.<br><br></p>
-                                        <h4 class="tm-text-secondary tm-about-subtitle" data-key="team_8_role">IT Health Manager</h4>
+                                        <p data-key="team_8_desc">IT and Digital Health Manager. Implements teleconsultation and digital patient records for better care.</p>
+                                        <h4 class="tm-text-secondary tm-about-subtitle" data-key="team_8_role">Digital Health Manager</h4>
                                     </div>
                                 </div>
                                 <div class="tm-carousel-item">
                                     <figure class="effect-honey mb-4">
-                                        <img src="img/staff7.jpg" alt="Image">
+                                        <img src="img/about-03.jpg" alt="Image">
                                         <figcaption>
                                             <ul class="tm-social">
                                                 <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
@@ -847,13 +767,13 @@
                                     </figure>
                                     <div class="tm-about-text">
                                         <h3 class="mb-3 tm-text-primary tm-about-title" data-key="team_9_name">Hajar Bennani</h3>
-                                        <p data-key="team_9_desc">Patient Relations Officer. Your first point of contact for appointments, inquiries, and support.<br><br></p>
+                                        <p data-key="team_9_desc">Patient Relations Officer. Your first point of contact for appointments, inquiries, and support.</p>
                                         <h4 class="tm-text-secondary tm-about-subtitle" data-key="team_9_role">Patient Relations</h4>
                                     </div>
                                 </div>
                                 <div class="tm-carousel-item">
                                     <figure class="effect-honey mb-4">
-                                        <img src="img/staff2.jpg" alt="Image">
+                                        <img src="img/about-01.jpg" alt="Image">
                                         <figcaption>
                                             <ul class="tm-social">
                                                 <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
@@ -864,7 +784,7 @@
                                     </figure>
                                     <div class="tm-about-text">
                                         <h3 class="mb-3 tm-text-primary tm-about-title" data-key="team_10_name">Mehdi Rahali</h3>
-                                        <p data-key="team_10_desc">Pharmacy and Supplies Manager. Ensures all medical materials are authentic, sterile, and up to standard.<br><br></p>
+                                        <p data-key="team_10_desc">Pharmacy and Supplies Manager. Ensures all medical materials are authentic, sterile, and up to standard.</p>
                                         <h4 class="tm-text-secondary tm-about-subtitle" data-key="team_10_role">Medical Supplies</h4>
                                     </div>
                                 </div>
@@ -964,24 +884,25 @@
     <script src="js/templatemo-script.js"></script>
     <script>
     let translations;
+        fetch('translations.json')
+           .then(response => response.json())
+            .then(data => {
+                translations = data;
+               // Apply the default language after loading
+              const currentLang = localStorage.getItem("lang") || "fr";
+                applyLanguage(currentLang);
+            })
+            .catch(error => console.error('Error loading translations:', error));
 
-    // Load translations
-    fetch('translations.json')
-        .then(r => r.json())
-        .then(data => {
-            translations = data;
-            const lang = localStorage.getItem("lang") || "fr";
-            applyLanguage(lang);
-        })
-        .catch(err => console.error('Translation error:', err));
+        document.addEventListener("DOMContentLoaded", () => {
+            const langToggle = document.getElementById("langToggle");
+            const langMenu = document.getElementById("langMenu");
+          const themeToggle = document.getElementById("themeToggle");
 
-    document.addEventListener("DOMContentLoaded", () => {
-        const langToggle = document.getElementById("langToggle");
-        const langMenu = document.getElementById("langMenu");
-        const themeToggle = document.getElementById("themeToggle");
+          langToggle.addEventListener("click", () => {
+            langMenu.classList.toggle("show");
+        });
 
-        // Language menu
-        langToggle.addEventListener("click", () => langMenu.classList.toggle("show"));
         document.querySelectorAll(".tm-lang-option").forEach(opt => {
             opt.addEventListener("click", () => {
                 const lang = opt.dataset.lang;
@@ -990,75 +911,42 @@
                 langMenu.classList.remove("show");
             });
         });
-        document.addEventListener("click", e => {
+
+        document.addEventListener("click", (e) => {
             if (!langToggle.contains(e.target) && !langMenu.contains(e.target)) {
                 langMenu.classList.remove("show");
             }
         });
 
-        // Theme
         const savedTheme = localStorage.getItem("theme") || "light";
         document.body.setAttribute("data-theme", savedTheme);
         updateThemeIcon(savedTheme);
+
         themeToggle.addEventListener("click", () => {
             const newTheme = document.body.getAttribute("data-theme") === "light" ? "dark" : "light";
             document.body.setAttribute("data-theme", newTheme);
             localStorage.setItem("theme", newTheme);
             updateThemeIcon(newTheme);
         });
-        function updateThemeIcon(t) {
-            themeToggle.innerHTML = t === "dark" ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+
+        function updateThemeIcon(theme) {
+            themeToggle.innerHTML = theme === "dark" ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
         }
 
-        // === FINAL: FIX HEIGHT ONLY FOR FRENCH & ENGLISH ===
-        function equalizeCarouselHeight() {
-            const $carousel = $('.tm-carousel');
-            if (!$carousel.length || !$carousel.hasClass('slick-initialized')) return;
-            if (document.documentElement.lang === "ar") return; // Arabic is perfect
+        function applyLanguage(lang) {
+            if (!translations) return; // Wait for JSON to load if not ready
 
-            // Reset all heights
-            $carousel.find('.slick-slide').css('height', 'auto');
-
-            // Measure tallest
-            let maxHeight = 0;
-            $carousel.find('.slick-slide').each(function() {
-                const h = $(this)[0].scrollHeight;
-                if (h > maxHeight) maxHeight = h;
-            });
-
-            // Apply
-            $carousel.find('.slick-slide').css('height', maxHeight + 'px');
-        }
-
-        // Run after Slick is ready
-        const initCheck = setInterval(() => {
-            if ($('.tm-carousel').hasClass('slick-initialized')) {
-                clearInterval(initCheck);
-                equalizeCarouselHeight();
-            }
-        }, 100);
-
-        // === FINAL applyLanguage() ===
-        window.applyLanguage = function(lang) {
-            if (!translations) return;
-
-            // Update text
             document.querySelectorAll("[data-key]").forEach(el => {
                 const key = el.dataset.key;
-                if (translations[lang]?.[key]) {
+                if (translations[lang][key]) {
                     el.textContent = translations[lang][key];
                 }
             });
 
-            // Set language & direction
             document.documentElement.lang = lang;
-            document.body.style.direction = lang === "ar" ? "rtl" : "ltr";
-
-            // Only fix height for French/English
-            if (lang !== "ar") {
-                setTimeout(equalizeCarouselHeight, 200);
-            }
-        };
+            // Always keep LTR direction to avoid layout changes
+            document.body.style.direction = "ltr";
+        }
     });
 </script>
 </body>
