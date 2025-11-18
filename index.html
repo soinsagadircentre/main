@@ -47,7 +47,7 @@
         .tm-carousel-item, .tm-text-container, .media { background: var(--card-bg); }
         .tm-carousel-item {
             height: 450px;
-            padding-top: 40px;
+            padding-top: 20px;
         }
         html[lang="en"] .tm-carousel-item {
             height: 450px;
@@ -372,18 +372,36 @@
         max-width: 100% !important;
         overflow: hidden;
     }
+    img {
+        border-radius: 8px !important;
+    }
+    .tm-gallery figure {
+        border-radius: 8px !important;
+        overflow: hidden;
+    }
     .tm-gallery figure img {
         display: block !important;
         width: 100% !important;
         height: auto !important;
         position: relative !important;
         transform: translateY(-32%) !important;
+        border-radius: 8px !important;
     }
     .tm-gallery figure.effect-honey img {
         transform: translateY(-32%) !important;
+        border-radius: 8px !important;
+    }
+    .tm-carousel figure {
+        border-radius: 8px !important;
+        overflow: hidden;
+        background: var(--card-bg);
     }
     .tm-carousel figure img {
         transform: none !important;
+        border-radius: 8px !important;
+    }
+    .btn {
+        border-radius: 8px !important;
     }
     .tm-copyright {
         background: #0a1628 !important;
