@@ -87,6 +87,10 @@ hr { border-top: 4px solid #CCC; }
 	padding-bottom: 150px;
 }
 
+.parallax-mirror {
+	z-index: 1 !important;
+}
+
 .tm-parallax {
 	width: 400px;	
 	min-height: 100%;
@@ -96,6 +100,7 @@ hr { border-top: 4px solid #CCC; }
     width: 400px;
     left: -470px;
     top: 0;
+    z-index: 1 !important;
 }
 
 /* Hide scrollbar */
@@ -221,10 +226,15 @@ hr { border-top: 4px solid #CCC; }
 
 .tm-text-container { max-width: 97%; }
 
+.media {
+	text-align: center;
+}
+
 .tm-post-icon {
 	width: 100px;
 	height: 100px;
-	margin-right: 20px;
+	margin-right: 0;
+	display: inline-block;
 }
 
 .tm-post-link:hover {
