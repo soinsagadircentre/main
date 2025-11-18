@@ -46,17 +46,18 @@
         hr { border-color: var(--hr); }
         .tm-carousel-item, .tm-text-container, .media { background: var(--card-bg); }
         .tm-carousel-item {
-            height: 420px;
+            height: 450px;
+            padding-top: 20px;
         }
         html[lang="en"] .tm-carousel-item {
-            height: 420px;
+            height: 450px;
         }
         html[lang="fr"] .tm-carousel-item {
-            height: 480px;
+            height: 500px;
             overflow: visible !important;
         }
         html[lang="ar"] .tm-carousel-item {
-            height: 360px;
+            height: 400px;
         }
         html[lang="ar"] .tm-about-subtitle {
             margin-top: 15px !important;
@@ -349,9 +350,48 @@
         margin-right: auto !important;
         margin-bottom: 24px !important;
         text-align: center !important;
+        border: none !important;
+        background: transparent !important;
     }
     .tm-icon-container p {
         text-align: center !important;
+    }
+    [data-theme="dark"] p {
+        color: #a0a0a0 !important;
+    }
+    #gallery {
+        margin-bottom: -130px !important;
+    }
+    .tm-gallery figure {
+        width: 23% !important;
+        min-width: 200px !important;
+        max-width: 100% !important;
+        overflow: hidden;
+    }
+    .tm-gallery figure img {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        position: relative !important;
+        transform: translateY(-32%) !important;
+    }
+    figure.effect-honey img {
+        transform: translateY(-32%) !important;
+    }
+    .tm-copyright {
+        background: #0a1628 !important;
+        color: white;
+        padding: 30px 70px 50px 0 !important;
+        position: relative;
+    }
+    .tm-copyright::before {
+        content: '';
+        position: absolute;
+        left: -470px;
+        top: 0;
+        bottom: 0;
+        width: 470px;
+        background: #0a1628;
     }
     .media:first-of-type .tm-post-icon {
         margin-top: 15px !important;
@@ -397,7 +437,7 @@
                     </button>
                     <div>
                         <div class="tm-brand-box">
-                            <h1 class="tm-brand" data-key="brand">Soins Agadir Center</h1>
+                            <img src="img/agadir.png" alt="Soins Agadir Center" class="tm-brand-logo" style="max-height: 150px; width: auto;">
                         </div>                
                         <ul id="tm-main-nav">
                             <li class="nav-item">                                
@@ -437,9 +477,6 @@
                             </li>
                         </ul>
                     </div>
-                    <footer class="mb-3 tm-mt-100">
-                        © 2025 <span data-key="brand">Soins Agadir Center</span>
-                    </footer>
                 </nav>
             </div>
             <div class="tm-main">
@@ -549,252 +586,57 @@
                                     <span data-key="filter_clinical">Clinical</span>
                                 </a>
                             </li>
-                            <li>
-                                <a href="javascript:void(0);" class="tm-gallery-link" data-filter="team">
-                                    <i class="fas fa-user-nurse tm-gallery-link-icon"></i>
-                                    <span data-key="filter_team">Our Team</span>
-                                </a>
-                            </li>
                         </ul>
                         <div class="tm-gallery">
                             <figure class="effect-honey tm-gallery-item home-care">
-                                <img src="img/gallery/tn/injection-01.jpg" alt="Image"/>
+                                <img src="img/gallery/delux.jpg" alt="Image"/>
                                 <figcaption>
-                                    <h2><i data-key="gal_injection">Injection à Domicile</i></h2>
-                                    <a href="img/gallery/injection-01.jpg">View more</a>						
+                                    <h2><i data-key="gal_delux">Delux Package</i></h2>
+                                    <a href="img/gallery/delux.jpg"><i data-key="view_more">View more</i></a>						
                                 </figcaption>			
                             </figure>
                             <figure class="effect-honey tm-gallery-item aesthetic">
-                                <img src="img/gallery/tn/hydrafacial-01.jpg" alt="Image"/>
+                                <img src="img/gallery/eclat.jpg" alt="Image"/>
                                 <figcaption>
-                                    <h2><i data-key="gal_hydra">Hydrafacial</i></h2>
-                                    <a href="img/gallery/hydrafacial-01.jpg">View more</a>						
+                                    <h2><i data-key="gal_eclat">Eclat Treatment</i></h2>
+                                    <a href="img/gallery/eclat.jpg"><i data-key="view_more">View more</i></a>						
                                 </figcaption>			
                             </figure>  
                             <figure class="effect-honey tm-gallery-item clinical">
-                                <img src="img/gallery/tn/wound-care-01.jpg" alt="Image"/>
+                                <img src="img/gallery/express.jpg" alt="Image"/>
                                 <figcaption>
-                                    <h2><i data-key="gal_wound">Pansement & Soins</i></h2>
-                                    <a href="img/gallery/wound-care-01.jpg">View more</a>						
-                                </figcaption>			
-                            </figure>
-                            <figure class="effect-honey tm-gallery-item team">
-                                <img src="img/gallery/tn/nurse-01.jpg" alt="Image"/>
-                                <figcaption>
-                                    <h2><i data-key="gal_nurse">Notre Équipe</i></h2>
-                                    <a href="img/gallery/nurse-01.jpg">View more</a>						
-                                </figcaption>			
-                            </figure> 
-                            <figure class="effect-honey tm-gallery-item aesthetic">
-                                <img src="img/gallery/tn/prp-01.jpg" alt="Image"/>
-                                <figcaption>
-                                    <h2><i data-key="gal_prp">PRP Capillaire</i></h2>
-                                    <a href="img/gallery/prp-01.jpg">View more</a>						
-                                </figcaption>			
-                            </figure>
-                            <figure class="effect-honey tm-gallery-item home-care">
-                                <img src="img/gallery/tn/home-visit-01.jpg" alt="Image"/>
-                                <figcaption>
-                                    <h2><i data-key="gal_visit">Visite à Domicile</i></h2>
-                                    <a href="img/gallery/home-visit-01.jpg">View more</a>						
-                                </figcaption>			
-                            </figure> 
-                            <figure class="effect-honey tm-gallery-item clinical">
-                                <img src="img/gallery/tn/clinic-room-01.jpg" alt="Image"/>
-                                <figcaption>
-                                    <h2><i data-key="gal_room">Clinique Moderne</i></h2>
-                                    <a href="img/gallery/clinic-room-01.jpg">View more</a>						
-                                </figcaption>			
-                            </figure>
-                            <figure class="effect-honey tm-gallery-item team">
-                                <img src="img/gallery/tn/doctor-01.jpg" alt="Image"/>
-                                <figcaption>
-                                    <h2><i data-key="gal_doctor">Médecin Superviseur</i></h2>
-                                    <a href="img/gallery/doctor-01.jpg">View more</a>						
-                                </figcaption>			
-                            </figure> 
-                            <figure class="effect-honey tm-gallery-item aesthetic">
-                                <img src="img/gallery/tn/microneedling-01.jpg" alt="Image"/>
-                                <figcaption>
-                                    <h2><i data-key="gal_microneedling">Microneedling</i></h2>
-                                    <a href="img/gallery/microneedling-01.jpg">View more</a>						
-                                </figcaption>			
-                            </figure>
-                            <figure class="effect-honey tm-gallery-item home-care">
-                                <img src="img/gallery/tn/iv-therapy-01.jpg" alt="Image"/>
-                                <figcaption>
-                                    <h2><i data-key="gal_iv">Perfusion IV</i></h2>
-                                    <a href="img/gallery/iv-therapy-01.jpg">View more</a>						
-                                </figcaption>			
-                            </figure>
-                            <figure class="effect-honey tm-gallery-item clinical">
-                                <img src="img/gallery/tn/equipment-01.jpg" alt="Image"/>
-                                <figcaption>
-                                    <h2><i data-key="gal_equipment">Matériel Stérile</i></h2>
-                                    <a href="img/gallery/equipment-01.jpg">View more</a>						
-                                </figcaption>			
-                            </figure>  
-                            <figure class="effect-honey tm-gallery-item aesthetic">
-                                <img src="img/gallery/tn/skin-glow-01.jpg" alt="Image"/>
-                                <figcaption>
-                                    <h2><i data-key="gal_glow">Résultat Hydrafacial</i></h2>
-                                    <a href="img/gallery/skin-glow-01.jpg">View more</a>						
-                                </figcaption>			
-                            </figure>
-                            <figure class="effect-honey tm-gallery-item team">
-                                <img src="img/gallery/tn/nurse-team-01.jpg" alt="Image"/>
-                                <figcaption>
-                                    <h2><i data-key="gal_team">Équipe Certifiée</i></h2>
-                                    <a href="img/gallery/nurse-team-01.jpg">View more</a>						
-                                </figcaption>			
-                            </figure> 
-                            <figure class="effect-honey tm-gallery-item home-care">
-                                <img src="img/gallery/tn/patient-care-01.jpg" alt="Image"/>
-                                <figcaption>
-                                    <h2><i data-key="gal_patient">Soins Personnalisés</i></h2>
-                                    <a href="img/gallery/patient-care-01.jpg">View more</a>						
-                                </figcaption>			
-                            </figure>
-                            <figure class="effect-honey tm-gallery-item clinical">
-                                <img src="img/gallery/tn/entrance-01.jpg" alt="Image"/>
-                                <figcaption>
-                                    <h2><i data-key="gal_entrance">Soins Agadir Center</i></h2>
-                                    <a href="img/gallery/entrance-01.jpg">View more</a>						
-                                </figcaption>			
-                            </figure> 
-                            <figure class="effect-honey tm-gallery-item aesthetic">
-                                <img src="img/gallery/tn/prp-face-01.jpg" alt="Image"/>
-                                <figcaption>
-                                    <h2><i data-key="gal_prp_face">PRP Rajeunissement</i></h2>
-                                    <a href="img/gallery/prp-face-01.jpg">View more</a>						
-                                </figcaption>			
-                            </figure>
-                            <figure class="effect-honey tm-gallery-item home-care">
-                                <img src="img/gallery/tn/blood-test-01.jpg" alt="Image"/>
-                                <figcaption>
-                                    <h2><i data-key="gal_blood">Prélèvement Sanguin</i></h2>
-                                    <a href="img/gallery/blood-test-01.jpg">View more</a>						
-                                </figcaption>			
-                            </figure> 
-                            <figure class="effect-honey tm-gallery-item clinical">
-                                <img src="img/gallery/tn/sterile-room-01.jpg" alt="Image"/>
-                                <figcaption>
-                                    <h2><i data-key="gal_sterile">Hygiène Maximale</i></h2>
-                                    <a href="img/gallery/sterile-room-01.jpg">View more</a>						
-                                </figcaption>			
-                            </figure>
-                            <figure class="effect-honey tm-gallery-item team">
-                                <img src="img/gallery/tn/nurse-smile-01.jpg" alt="Image"/>
-                                <figcaption>
-                                    <h2><i data-key="gal_smile">Service Humain</i></h2>
-                                    <a href="img/gallery/nurse-smile-01.jpg">View more</a>						
+                                    <h2><i data-key="gal_express">Express Care</i></h2>
+                                    <a href="img/gallery/express.jpg"><i data-key="view_more">View more</i></a>						
                                 </figcaption>			
                             </figure>
                             <figure class="effect-honey tm-gallery-item aesthetic">
-                                <img src="img/gallery/tn/hair-growth-01.jpg" alt="Image"/>
+                                <img src="img/gallery/prestigieux.jpg" alt="Image"/>
                                 <figcaption>
-                                    <h2><i data-key="gal_hair">Résultat PRP Cheveux</i></h2>
-                                    <a href="img/gallery/hair-growth-01.jpg">View more</a>						
+                                    <h2><i data-key="gal_prestigieux">Prestigious Package</i></h2>
+                                    <a href="img/gallery/prestigieux.jpg"><i data-key="view_more">View more</i></a>						
                                 </figcaption>			
-                            </figure>  
+                            </figure>
                             <figure class="effect-honey tm-gallery-item home-care">
-                                <img src="img/gallery/tn/elderly-care-01.jpg" alt="Image"/>
+                                <img src="img/gallery/pro.jpg" alt="Image"/>
                                 <figcaption>
-                                    <h2><i data-key="gal_elderly">Soins Personnes Âgées</i></h2>
-                                    <a href="img/gallery/elderly-care-01.jpg">View more</a>						
+                                    <h2><i data-key="gal_pro">Professional Care</i></h2>
+                                    <a href="img/gallery/pro.jpg"><i data-key="view_more">View more</i></a>						
                                 </figcaption>			
-                            </figure>
-                            <figure class="effect-honey tm-gallery-item clinical">
-                                <img src="img/gallery/tn/medical-supplies-01.jpg" alt="Image"/>
-                                <figcaption>
-                                    <h2><i data-key="gal_supplies">Matériel de Qualité</i></h2>
-                                    <a href="img/gallery/medical-supplies-01.jpg">View more</a>						
-                                </figcaption>			
-                            </figure>
+                            </figure> 
                             <figure class="effect-honey tm-gallery-item aesthetic">
-                                <img src="img/gallery/tn/skin-treatment-01.jpg" alt="Image"/>
+                                <img src="img/gallery/therapie.jpg" alt="Image"/>
                                 <figcaption>
-                                    <h2><i data-key="gal_acne">Traitement Acné</i></h2>
-                                    <a href="img/gallery/skin-treatment-01.jpg">View more</a>						
-                                </figcaption>			
-                            </figure>
-                            <figure class="effect-honey tm-gallery-item team">
-                                <img src="img/gallery/tn/team-meeting-01.jpg" alt="Image"/>
-                                <figcaption>
-                                    <h2><i data-key="gal_meeting">Coordination Médicale</i></h2>
-                                    <a href="img/gallery/team-meeting-01.jpg">View more</a>						
-                                </figcaption>			
-                            </figure> 
-                            <figure class="effect-honey tm-gallery-item home-care">
-                                <img src="img/gallery/tn/diabetic-care-01.jpg" alt="Image"/>
-                                <figcaption>
-                                    <h2><i data-key="gal_diabetic">Soins Diabète</i></h2>
-                                    <a href="img/gallery/diabetic-care-01.jpg">View more</a>						
+                                    <h2><i data-key="gal_therapie">Therapy Beauty</i></h2>
+                                    <a href="img/gallery/therapie.jpg"><i data-key="view_more">View more</i></a>						
                                 </figcaption>			
                             </figure>
                             <figure class="effect-honey tm-gallery-item clinical">
-                                <img src="img/gallery/tn/reception-01.jpg" alt="Image"/>
+                                <img src="img/gallery/tonus.jpg" alt="Image"/>
                                 <figcaption>
-                                    <h2><i data-key="gal_reception">Accueil Chaleureux</i></h2>
-                                    <a href="img/gallery/reception-01.jpg">View more</a>						
+                                    <h2><i data-key="gal_tonus">Wellness Clinic</i></h2>
+                                    <a href="img/gallery/tonus.jpg"><i data-key="view_more">View more</i></a>						
                                 </figcaption>			
                             </figure>
-                            <figure class="effect-honey tm-gallery-item aesthetic">
-                                <img src="img/gallery/tn/microneedling-result-01.jpg" alt="Image"/>
-                                <figcaption>
-                                    <h2><i data-key="gal_microneedling_result">Résultat Microneedling</i></h2>
-                                    <a href="img/gallery/microneedling-result-01.jpg">View more</a>						
-                                </figcaption>			
-                            </figure> 
-                            <figure class="effect-honey tm-gallery-item team">
-                                <img src="img/gallery/tn/nurse-training-01.jpg" alt="Image"/>
-                                <figcaption>
-                                    <h2><i data-key="gal_training">Formation Continue</i></h2>
-                                    <a href="img/gallery/nurse-training-01.jpg">View more</a>						
-                                </figcaption>			
-                            </figure>
-                            <figure class="effect-honey tm-gallery-item home-care">
-                                <img src="img/gallery/tn/post-op-care-01.jpg" alt="Image"/>
-                                <figcaption>
-                                    <h2><i data-key="gal_postop">Soins Post-Op</i></h2>
-                                    <a href="img/gallery/post-op-care-01.jpg">View more</a>						
-                                </figcaption>			
-                            </figure>
-                            <figure class="effect-honey tm-gallery-item clinical">
-                                <img src="img/gallery/tn/location-01.jpg" alt="Image"/>
-                                <figcaption>
-                                    <h2><i data-key="gal_location">Facilement Accessible</i></h2>
-                                    <a href="img/gallery/location-01.jpg">View more</a>						
-                                </figcaption>			
-                            </figure>  
-                            <figure class="effect-honey tm-gallery-item aesthetic">
-                                <img src="img/gallery/tn/skin-hydration-01.jpg" alt="Image"/>
-                                <figcaption>
-                                    <h2><i data-key="gal_hydration">Hydratation Profonde</i></h2>
-                                    <a href="img/gallery/skin-hydration-01.jpg">View more</a>						
-                                </figcaption>			
-                            </figure>
-                            <figure class="effect-honey tm-gallery-item team">
-                                <img src="img/gallery/tn/nurse-patient-01.jpg" alt="Image"/>
-                                <figcaption>
-                                    <h2><i data-key="gal_trust">Confiance & Écoute</i></h2>
-                                    <a href="img/gallery/nurse-patient-01.jpg">View more</a>						
-                                </figcaption>			
-                            </figure> 
-                            <figure class="effect-honey tm-gallery-item home-care">
-                                <img src="img/gallery/tn/vaccination-01.jpg" alt="Image"/>
-                                <figcaption>
-                                    <h2><i data-key="gal_vaccine">Vaccination</i></h2>
-                                    <a href="img/gallery/vaccination-01.jpg">View more</a>						
-                                </figcaption>			
-                            </figure>
-                            <figure class="effect-honey tm-gallery-item clinical">
-                                <img src="img/gallery/tn/consultation-01.jpg" alt="Image"/>
-                                <figcaption>
-                                    <h2><i data-key="gal_consult">Consultation</i></h2>
-                                    <a href="img/gallery/consultation-01.jpg">View more</a>						
-                                </figcaption>			
-                            </figure> 
                         </div>
                     </section>
                 </div>
@@ -1004,7 +846,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <textarea rows="8" name="message" class="form-control rounded-0" placeholder="Message" data-key="form_message" required></textarea>
+                                        <textarea rows="15" name="message" class="form-control rounded-0" placeholder="Message" data-key="form_message" required></textarea>
                                     </div>
                                     <div class="form-group tm-text-right">
                                         <button type="submit" class="btn btn-primary" data-key="form_send">Send</button>
@@ -1052,7 +894,12 @@
                 <div class="tm-section-wrap tm-copyright row">
                     <div class="col-12">
                         <div class="text-right">
-                            <span data-key="copyright">Copyright 2025 Soins Agadir Center</span>
+                            <div class="mb-3">
+                                <a href="#privacy" class="tm-footer-link" style="color: inherit; text-decoration: none; margin-right: 20px;"><i data-key="privacy_policy">Privacy Policy</i></a>
+                                <a href="#terms" class="tm-footer-link" style="color: inherit; text-decoration: none; margin-right: 20px;"><i data-key="terms_service">Terms of Service</i></a>
+                                <a href="#data-protection" class="tm-footer-link" style="color: inherit; text-decoration: none;"><i data-key="data_protection">Data Protection</i></a>
+                            </div>
+                            © 2025 <span data-key="copyright">Soins Agadir Center</span>
                         </div> 
                     </div>
                 </div>                 
@@ -1074,7 +921,7 @@
             .then(data => {
                 translations = data;
                // Apply the default language after loading
-              const currentLang = localStorage.getItem("lang") || "fr";
+              const currentLang = localStorage.getItem("lang") || "en";
                 applyLanguage(currentLang);
             })
             .catch(error => console.error('Error loading translations:', error));
@@ -1083,6 +930,12 @@
             const langToggle = document.getElementById("langToggle");
             const langMenu = document.getElementById("langMenu");
           const themeToggle = document.getElementById("themeToggle");
+          
+          // Re-apply language on DOMContentLoaded to ensure all elements are translated
+          const currentLang = localStorage.getItem("lang") || "en";
+          if (translations) {
+              applyLanguage(currentLang);
+          }
 
           langToggle.addEventListener("click", () => {
             langMenu.classList.toggle("show");
@@ -1091,8 +944,9 @@
         document.querySelectorAll(".tm-lang-option").forEach(opt => {
             opt.addEventListener("click", () => {
                 const lang = opt.dataset.lang;
-                applyLanguage(lang);
                 localStorage.setItem("lang", lang);
+                // Apply language with a small delay to ensure all elements are ready
+                setTimeout(() => applyLanguage(lang), 10);
                 langMenu.classList.remove("show");
             });
         });
@@ -1121,9 +975,11 @@
         function applyLanguage(lang) {
             if (!translations) return; // Wait for JSON to load if not ready
 
+            // Update all elements with data-key attribute
             document.querySelectorAll("[data-key]").forEach(el => {
                 const key = el.dataset.key;
-                if (translations[lang][key]) {
+                if (translations[lang] && translations[lang][key]) {
+                    // For <i> tags inside <h2> or other elements, just update the text content
                     el.textContent = translations[lang][key];
                 }
             });
@@ -1131,7 +987,279 @@
             document.documentElement.lang = lang;
             // Always keep LTR direction to avoid layout changes
             document.body.style.direction = "ltr";
+            
+            // Force a re-render to ensure changes are visible
+            document.body.offsetHeight;
         }
+    });
+
+    // Legal pages functionality
+    function showLegalPage(pageId) {
+        const modal = document.createElement('div');
+        modal.id = pageId;
+        modal.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10000; overflow-y: auto; padding: 20px 0;';
+        
+        const currentLang = localStorage.getItem("lang") || "en";
+        let title = '';
+        
+        // Get translated title if translations are available
+        if (translations) {
+            if (pageId === 'privacy') {
+                title = translations[currentLang]['privacy_policy'] || 'Privacy Policy';
+            } else if (pageId === 'terms') {
+                title = translations[currentLang]['terms_service'] || 'Terms of Service';
+            } else if (pageId === 'data-protection') {
+                title = translations[currentLang]['data_protection'] || 'Data Protection';
+            }
+        } else {
+            // Fallback if translations not loaded
+            if (pageId === 'privacy') title = 'Privacy Policy';
+            else if (pageId === 'terms') title = 'Terms of Service';
+            else if (pageId === 'data-protection') title = 'Data Protection';
+        }
+        
+        let content = '';
+        if (pageId === 'privacy') {
+            content = `
+                <div style="background: white; max-width: 900px; margin: 20px auto; padding: 40px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); position: relative;">
+                    <button onclick="document.getElementById('${pageId}').remove()" style="position: absolute; top: 15px; right: 15px; background: none; border: none; font-size: 28px; cursor: pointer; color: #666;">&times;</button>
+                    <h1>${title}</h1>
+                    <p style="color: #666; font-style: italic; margin-bottom: 30px;">Last Updated: November 2025</p>
+                    
+                    <h2>1. Introduction</h2>
+                    <p>Soins Agadir Center ("we", "us", "our" or "Company") is committed to protecting your privacy and ensuring you have a positive experience on our website and when receiving our services. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our medical services.</p>
+                    
+                    <h2>2. Information We Collect</h2>
+                    <p>We may collect information about you in a variety of ways. The information we may collect on the site includes:</p>
+                    <ul>
+                        <li><strong>Personal Data:</strong> Name, email address, telephone number, postal address, date of birth</li>
+                        <li><strong>Medical Information:</strong> Medical history, health concerns, allergies, current medications (provided voluntarily through contact forms)</li>
+                        <li><strong>Technical Data:</strong> IP address, browser type, operating system, pages visited, time spent on pages</li>
+                        <li><strong>Cookie Data:</strong> Information stored through cookies and similar tracking technologies</li>
+                    </ul>
+                    
+                    <h2>3. How We Use Your Information</h2>
+                    <p>Soins Agadir Center uses the collected data for various purposes:</p>
+                    <ul>
+                        <li>To provide and maintain our medical services</li>
+                        <li>To notify you about changes to our services or policies</li>
+                        <li>To provide customer service and respond to your inquiries</li>
+                        <li>To gather analysis or valuable information so we can improve our services</li>
+                        <li>To monitor the usage of our website and services</li>
+                        <li>To detect, prevent and address technical and security issues</li>
+                        <li>To comply with legal obligations and medical regulations</li>
+                    </ul>
+                    
+                    <h2>4. Data Protection and Security</h2>
+                    <p>Soins Agadir Center implements appropriate technical and organizational measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. These measures include:</p>
+                    <ul>
+                        <li>SSL encryption for data transmission</li>
+                        <li>Restricted access to personal data by authorized personnel only</li>
+                        <li>Regular security audits and updates</li>
+                        <li>Compliance with medical data protection standards</li>
+                        <li>Secure data storage with multiple backups</li>
+                    </ul>
+                    
+                    <h2>5. Third-Party Disclosure</h2>
+                    <p>We do not sell, trade, or otherwise transfer your personally identifiable information to outside parties without your explicit consent, except as required by law. Trusted third parties who assist us in operating our website, conducting our business, or serving our patients may have access to your information under strict confidentiality agreements.</p>
+                    
+                    <h2>6. GDPR and Legal Compliance</h2>
+                    <p>If you are located in the European Union, you have the following rights under the General Data Protection Regulation (GDPR):</p>
+                    <ul>
+                        <li>Right to access your personal data</li>
+                        <li>Right to rectification of inaccurate data</li>
+                        <li>Right to erasure (right to be forgotten)</li>
+                        <li>Right to restrict processing</li>
+                        <li>Right to data portability</li>
+                        <li>Right to object to processing</li>
+                    </ul>
+                    
+                    <h2>7. Cookies and Tracking Technologies</h2>
+                    <p>We use cookies to enhance your experience on our website. You can choose to disable cookies through your browser settings, though this may affect certain website functionalities.</p>
+                    
+                    <h2>8. Data Retention</h2>
+                    <p>We retain personal data for as long as necessary to provide our services and fulfill the purposes outlined in this policy. Medical records are retained in accordance with legal requirements and best practices in healthcare.</p>
+                    
+                    <h2>9. Contact Us</h2>
+                    <p>If you have questions about this Privacy Policy, please contact us at:<br/>
+                    Email: contact@soinsagadircenter.com<br/>
+                    Phone: +212 6 12 34 56 78<br/>
+                    Address: 94, Rue El Farabi, Bloc E8, Cité Dakhla, Agadir, Morocco</p>
+                    
+                    <button onclick="document.getElementById('${pageId}').remove()" style="background: #0a7fb8; color: white; border: none; padding: 12px 30px; cursor: pointer; margin-top: 30px; border-radius: 5px; font-size: 16px;">Close</button>
+                </div>
+            `;
+        } else if (pageId === 'terms') {
+            content = `
+                <div style="background: white; max-width: 900px; margin: 20px auto; padding: 40px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); position: relative;">
+                    <button onclick="document.getElementById('${pageId}').remove()" style="position: absolute; top: 15px; right: 15px; background: none; border: none; font-size: 28px; cursor: pointer; color: #666;">&times;</button>
+                    <h1>${title}</h1>
+                    <p style="color: #666; font-style: italic; margin-bottom: 30px;">Last Updated: November 2025</p>
+                    
+                    <h2>1. Agreement to Terms</h2>
+                    <p>By accessing and using the Soins Agadir Center website and services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
+                    
+                    <h2>2. Use License</h2>
+                    <p>Permission is granted to temporarily download one copy of the materials (information or software) on Soins Agadir Center's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:</p>
+                    <ul>
+                        <li>Modify or copy the materials</li>
+                        <li>Use the materials for any commercial purpose or for any public display</li>
+                        <li>Attempt to decompile or reverse engineer any software contained on the website</li>
+                        <li>Remove any copyright or other proprietary notations from the materials</li>
+                        <li>Transfer the materials to another person or "mirror" the materials on any other server</li>
+                    </ul>
+                    
+                    <h2>3. Medical Disclaimer</h2>
+                    <p>The information provided on this website is for informational purposes only and does not constitute medical advice. Soins Agadir Center does not diagnose, treat, or provide medical advice through this website. Always consult with a qualified healthcare professional for any medical concerns. The use of this website does not establish a doctor-patient relationship.</p>
+                    
+                    <h2>4. Medical Services Terms</h2>
+                    <p>Our medical services are provided by licensed and certified healthcare professionals. While we strive to provide the highest quality care:</p>
+                    <ul>
+                        <li>We do not guarantee specific medical outcomes or results</li>
+                        <li>Individual results may vary based on patient factors and compliance</li>
+                        <li>Patients must provide accurate and complete medical history</li>
+                        <li>Patients must follow all medical advice and treatment protocols</li>
+                        <li>Contraindications and allergies must be disclosed to medical staff</li>
+                    </ul>
+                    
+                    <h2>5. Appointment and Cancellation Policy</h2>
+                    <p><strong>Booking:</strong> Appointments must be booked through our contact form or by phone.<br/>
+                    <strong>Cancellation:</strong> Cancellations must be made at least 24 hours in advance. Cancellations made less than 24 hours before the appointment may incur a cancellation fee.<br/>
+                    <strong>No-Show:</strong> Patients who fail to attend scheduled appointments without notice may be charged a no-show fee.</p>
+                    
+                    <h2>6. Patient Responsibilities</h2>
+                    <ul>
+                        <li>Arrive on time for appointments</li>
+                        <li>Provide accurate medical and personal information</li>
+                        <li>Follow medical instructions and treatment plans</li>
+                        <li>Inform staff of any adverse reactions or complications</li>
+                        <li>Maintain respect and professionalism with medical staff</li>
+                    </ul>
+                    
+                    <h2>7. Limitation of Liability</h2>
+                    <p>In no event shall Soins Agadir Center or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Soins Agadir Center's website or services, even if we or an authorized representative has been notified orally or in writing of the possibility of such damage.</p>
+                    
+                    <h2>8. Accuracy of Materials</h2>
+                    <p>The materials appearing on Soins Agadir Center's website could include technical, typographical, or photographic errors. Soins Agadir Center does not warrant that any of the materials on its website are accurate, complete, or current. Soins Agadir Center may make changes to the materials contained on its website at any time without notice.</p>
+                    
+                    <h2>9. Links and External Websites</h2>
+                    <p>Soins Agadir Center has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by Soins Agadir Center of the site. Use of any such linked website is at the user's own risk.</p>
+                    
+                    <h2>10. Modifications to Terms</h2>
+                    <p>Soins Agadir Center may revise these terms of service for its website at any time without notice. By using this website, you are agreeing to be bound by the then current version of these terms of service.</p>
+                    
+                    <h2>11. Governing Law</h2>
+                    <p>These terms and conditions are governed by and construed in accordance with the laws of Morocco, and you irrevocably submit to the exclusive jurisdiction of the courts in that location.</p>
+                    
+                    <button onclick="document.getElementById('${pageId}').remove()" style="background: #0a7fb8; color: white; border: none; padding: 12px 30px; cursor: pointer; margin-top: 30px; border-radius: 5px; font-size: 16px;">Close</button>
+                </div>
+            `;
+        } else if (pageId === 'data-protection') {
+            content = `
+                <div style="background: white; max-width: 900px; margin: 20px auto; padding: 40px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); position: relative;">
+                    <button onclick="document.getElementById('${pageId}').remove()" style="position: absolute; top: 15px; right: 15px; background: none; border: none; font-size: 28px; cursor: pointer; color: #666;">&times;</button>
+                    <h1>${title}</h1>
+                    <p style="color: #666; font-style: italic; margin-bottom: 30px;">Last Updated: November 2025</p>
+                    
+                    <h2>1. Commitment to Confidentiality</h2>
+                    <p>Soins Agadir Center is committed to maintaining the confidentiality of all patient information in accordance with international medical ethics standards and applicable healthcare regulations. Patient privacy is a fundamental right and cornerstone of our practice.</p>
+                    
+                    <h2>2. Medical Record Protection</h2>
+                    <p>All patient medical records, health information, and personal data are maintained in secure, controlled environments. Access to patient records is restricted to authorized medical personnel and support staff with a legitimate need to know for treatment, administration, or legal purposes.</p>
+                    
+                    <h2>3. Data Collection and Purpose</h2>
+                    <p>We collect patient data only for legitimate healthcare purposes including:</p>
+                    <ul>
+                        <li>Direct patient care and treatment provision</li>
+                        <li>Patient health assessment and medical history maintenance</li>
+                        <li>Appointment scheduling and medical follow-up</li>
+                        <li>Billing and insurance purposes (where applicable)</li>
+                        <li>Quality improvement and patient safety initiatives</li>
+                        <li>Legal and regulatory compliance</li>
+                    </ul>
+                    
+                    <h2>4. Data Security Measures</h2>
+                    <p>Soins Agadir Center implements comprehensive technical and organizational safeguards:</p>
+                    <ul>
+                        <li>SSL/TLS encryption for all data transmission</li>
+                        <li>Secure servers with firewall protection</li>
+                        <li>Regular security audits and penetration testing</li>
+                        <li>Access controls and role-based permissions</li>
+                        <li>Automatic data backups with redundancy</li>
+                        <li>Regular software updates and security patches</li>
+                        <li>Incident response and breach notification procedures</li>
+                    </ul>
+                    
+                    <h2>5. GDPR Compliance</h2>
+                    <p>For patients in the European Union, we fully comply with the General Data Protection Regulation (GDPR). This includes:</p>
+                    <ul>
+                        <li><strong>Data Subject Rights:</strong> Patients have the right to access, correct, port, and request deletion of their personal data</li>
+                        <li><strong>Lawful Basis:</strong> Processing is based on medical necessity and explicit patient consent</li>
+                        <li><strong>Data Protection Officer:</strong> Contact details available upon request</li>
+                        <li><strong>International Transfer:</strong> Any international data transfer is done with appropriate safeguards</li>
+                        <li><strong>Breach Notification:</strong> We notify patients of any security breaches within 72 hours as required</li>
+                    </ul>
+                    
+                    <h2>6. Limitations on Disclosure</h2>
+                    <p>Patient information is not disclosed to third parties without explicit patient consent, except:</p>
+                    <ul>
+                        <li>To healthcare providers involved in patient care</li>
+                        <li>To insurance companies for billing purposes (with patient authorization)</li>
+                        <li>To family members or legal guardians as appropriate</li>
+                        <li>When required by law or court order</li>
+                        <li>In medical emergencies where patient safety is at risk</li>
+                        <li>For public health purposes as required by law</li>
+                    </ul>
+                    
+                    <h2>7. Data Retention Policy</h2>
+                    <p>Medical records are retained for a minimum of 10 years from the date of last treatment in accordance with healthcare regulations. Patients may request access to their records at any time. Upon patient request, records may be transferred to another healthcare provider in a secure manner.</p>
+                    
+                    <h2>8. Patient Access and Correction Rights</h2>
+                    <p>Patients have the right to:</p>
+                    <ul>
+                        <li>Access their complete medical records</li>
+                        <li>Request correction of inaccurate information</li>
+                        <li>Obtain copies of their medical records</li>
+                        <li>Request an accounting of disclosures</li>
+                        <li>File complaints regarding privacy violations</li>
+                    </ul>
+                    
+                    <h2>9. Special Sensitive Data</h2>
+                    <p>We recognize that certain health information is particularly sensitive. Information related to HIV status, mental health treatment, substance abuse, or genetic information is handled with additional precautions and stricter confidentiality measures.</p>
+                    
+                    <h2>10. Staff Training and Accountability</h2>
+                    <p>All Soins Agadir Center staff members receive regular training on data protection, medical confidentiality, and patient privacy rights. Staff members sign confidentiality agreements and are held accountable for any breaches of patient privacy.</p>
+                    
+                    <h2>11. Contact for Privacy Concerns</h2>
+                    <p>If you have concerns about how your data is being handled or believe your privacy rights have been violated, please contact us immediately:<br/>
+                    Email: privacy@soinsagadircenter.com<br/>
+                    Phone: +212 6 12 34 56 78<br/>
+                    Address: 94, Rue El Farabi, Bloc E8, Cité Dakhla, Agadir, Morocco<br/>
+                    <br/>You also have the right to file a complaint with your local data protection authority.</p>
+                    
+                    <button onclick="document.getElementById('${pageId}').remove()" style="background: #0a7fb8; color: white; border: none; padding: 12px 30px; cursor: pointer; margin-top: 30px; border-radius: 5px; font-size: 16px;">Close</button>
+                </div>
+            `;
+        }
+        
+        modal.innerHTML = content;
+        document.body.appendChild(modal);
+        
+        // Close modal when clicking outside of it
+        modal.addEventListener('click', function(e) {
+            if (e.target === this) {
+                modal.remove();
+            }
+        });
+    }
+
+    // Add event listeners to footer links
+    document.querySelectorAll('.tm-footer-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const pageId = this.getAttribute('href').substring(1);
+            showLegalPage(pageId);
+        });
     });
 </script>
 </body>

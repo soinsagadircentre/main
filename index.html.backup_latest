@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soins Agadir Center</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="slick/slick.min.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="css/templatemo-upright.css">
+    <style>
+        :root {
+            --primary: #00a8a8;
+            --text: #333;
+            --bg: #fff;
+            --card-bg: #f8f9fa;
+            --hr: #ddd;
+        }
+        [data-theme="dark"] {
+            --primary: #00d4d4;
+            --text: #e0f7fa;
+            --bg: #121f3d;
+            --card-bg: #1a2a44;
+            --hr: #2c3e50;
+        }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            transition: background 0.3s, color 0.3s;
+        }
+        .tm-text-primary { color: var(--primary) !important; }
+    .tm-text-container, .media-body, .tm-about-text, .tm-contact-form, address, .tm-contact-links a {
+        color: var(--text);
+    }
+    p {
+        color: var(--text) !important;
+    }
+    [data-theme="dark"] p {
+        color: white !important;
+    }
+        .tm-gallery-item figcaption, .tm-post-link { color: #fff; }
+        .tm-section, .tm-section-wrap { background: var(--bg); }
+        hr { border-color: var(--hr); }
+        .tm-carousel-item, .tm-text-container, .media { background: var(--card-bg); }
+        .tm-carousel-item {
+            height: 450px;
+            padding-top: 20px;
+        }
+        html[lang="en"] .tm-carousel-item {
+            height: 450px;
+        }
+        html[lang="fr"] .tm-carousel-item {
+            height: 500px;
+            overflow: visible !important;
+        }
+        html[lang="ar"] .tm-carousel-item {
+            height: 400px;
+        }
+        html[lang="ar"] .tm-about-subtitle {
+            margin-top: 15px !important;
+        }
+        html[lang="fr"] .tm-about-subtitle {
+            margin-top: 65px !important;
+        }
+        html[lang="fr"] .tm-carousel-item:nth-child(1) .tm-about-subtitle { margin-top: 10px !important; transform: translateY(0px); }
+        html[lang="fr"] .tm-carousel-item:nth-child(2) .tm-about-subtitle { margin-top: 10px !important; transform: translateY(0px); }
+        html[lang="fr"] .tm-carousel-item:nth-child(3) .tm-about-subtitle { margin-top: 10px !important; transform: translateY(0px); font-size: 14px; }
+        html[lang="fr"] .tm-carousel-item:nth-child(4) .tm-about-subtitle { margin-top: 10px !important; transform: translateY(0px); }
+        html[lang="fr"] .tm-carousel-item:nth-child(5) .tm-about-subtitle { margin-top: 10px !important; transform: translateY(0px); }
+        html[lang="fr"] .tm-carousel-item:nth-child(6) .tm-about-subtitle { margin-top: 10px !important; transform: translateY(0px); font-size: 14px; }
+        html[lang="fr"] .tm-carousel-item:nth-child(7) .tm-about-subtitle { margin-top: 10px !important; transform: translateY(0px); }
+        html[lang="fr"] .tm-carousel-item:nth-child(8) .tm-about-subtitle { margin-top: 10px !important; transform: translateY(0px); }
+        html[lang="fr"] .tm-carousel-item:nth-child(9) .tm-about-subtitle { margin-top: 10px !important; transform: translateY(0px); }
+        html[lang="fr"] .tm-carousel-item:nth-child(10) .tm-about-subtitle { margin-top: 10px !important; transform: translateY(0px); }
+        .tm-about-text p {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+        }
+        html[lang="fr"] .tm-about-text p {
+            height: 200px;
+            overflow: hidden;
+            align-items: flex-start;
+        }
+
+        .tm-about-subtitle {
+            margin-bottom: 0 !important;
+            padding: 0 !important;
+        }
+        .slick-slider {
+            transform: translateX(15px);
+        }
+        html[lang="en"] .slick-slider,
+        html[lang="ar"] .slick-slider {
+            transform: translateX(15px);
+        }
+        .slick-prev, .slick-next {
+            width: 40px;
+            height: 40px;
+            background: var(--primary) !important;
+            border-radius: 50%;
+            z-index: 1;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            transform: translateY(-50px);
+            outline: none !important;
+            border: none !important;
+            box-shadow: 0 0 0 0 !important;
+        }
+        .slick-prev:focus, .slick-next:focus {
+            outline: none !important;
+            box-shadow: 0 0 0 0 !important;
+            background: var(--primary) !important;
+        }
+        .slick-prev:hover, .slick-next:hover {
+            box-shadow: 0 0 0 0 !important;
+            background: var(--primary) !important;
+        }
+        .slick-prev.slick-disabled,
+        .slick-next.slick-disabled {
+            display: none !important;
+        }
+        .slick-prev:before, .slick-next:before {
+            color: white;
+            font-size: 20px;
+        }
+        .slick-prev {
+            left: -50px;
+        }
+        .slick-next {
+            right: -50px;
+        }
+        address {
+            margin-bottom: 0 !important;
+            line-height: 1.2;
+            transform: translateY(-15px);
+        }
+        .tm-contact-links {
+            margin-top: -10px !important;
+        }
+        .tm-parallax {
+            height: 20px !important;
+        }
+        #contact {
+            padding-top: 0px !important;
+            margin-top: -180px !important;
+            transform: translateY(80px);
+        }
+        .tm-brand-box, #tm-sidebar { background: rgba(0,0,0,0.05); }
+        [data-theme="dark"] .tm-brand-box, [data-theme="dark"] #tm-sidebar { background: rgba(0,0,0,0.3); }
+        .tm-floating-icons {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+            display: flex;
+            gap: 12px;
+        }
+        .tm-icon-btn {
+            width: 44px;
+            height: 44px;
+            background: rgba(255,255,255,0.9);
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: var(--primary);
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        [data-theme="dark"] .tm-icon-btn {
+            background: rgba(18,31,61,0.9);
+            color: #00d4d4;
+            border-color: #00d4d4;
+        }
+        .tm-icon-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(0,168,168,0.3);
+        }
+        .tm-lang-menu {
+            position: absolute;
+            top: 55px;
+            right: 0;
+            background: var(--card-bg);
+            border: 1px solid var(--hr);
+            border-radius: 8px;
+            padding: 8px;
+            display: none;
+            flex-direction: column;
+            min-width: 120px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .tm-lang-menu.show { display: flex; }
+        .tm-lang-option {
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .tm-lang-option:hover { background: var(--primary); color: white; }
+        [data-theme="dark"] .tm-lang-menu { background: #1a2a44; border-color: #2c3e50; }
+        [dir="rtl"] .tm-floating-icons { left: 20px; right: auto; }
+        [dir="rtl"] .text-right { text-align: left !important; }
+        [dir="rtl"] .tm-nav .nav-link { padding-right: 20px; padding-left: 0; }
+        html[lang="ar"] .tm-text-container,
+    html[lang="ar"] .media-body,
+    html[lang="ar"] .tm-about-text,
+    html[lang="ar"] .tm-contact-form,
+    html[lang="ar"] address,
+    html[lang="ar"] .tm-contact-links a,
+    html[lang="ar"] h2,
+    html[lang="ar"] p,
+    html[lang="ar"] span[data-key],
+    html[lang="ar"] .nav-link span,
+    html[lang="ar"] .tm-gallery-item figcaption h2,
+    html[lang="ar"] .tm-gallery-item figcaption a,
+    html[lang="ar"] .tm-lang-option,
+    html[lang="ar"] input,
+    html[lang="ar"] textarea,
+    html[lang="ar"] select,
+    html[lang="ar"] .tm-about-title,
+    html[lang="ar"] .tm-about-subtitle {
+        direction: ltr;
+        text-align: left;
+    }
+
+    /* Center text in about section */
+    .tm-about-text {
+        text-align: center !important;
+    }
+    .tm-about-text h3,
+    .tm-about-text h4,
+    .tm-about-text p {
+        text-align: center !important;
+    }
+
+    /* Optional: Adjust padding/margins for icons in media (keep icon on left, text right-aligned) */
+        html[lang="ar"] .media {
+        display: flex;
+        align-items: flex-start;
+    }
+    html[lang="ar"] .media .tm-post-icon {
+        order: 0; /* Keep icon on left */
+    margin-right: 15px; /* Adjust spacing */
+        margin-left: 0;
+    }
+    html[lang="ar"] .media-body {
+        order: 1;
+    }
+
+    /* Keep floating icons on right, even in Arabic */
+    html[lang="ar"] .tm-floating-icons {
+        left: auto;
+        right: 20px;
+    }
+
+    /* Override any existing RTL rules that might flip things */
+    html[lang="ar"] .text-right {
+        text-align: right !important; /* Keep as is, or change to left if needed */
+    }
+    html[lang="ar"] .tm-nav .nav-link {
+        padding-left: 20px;
+        padding-right: 0;
+    }
+    html[lang="ar"] .tm-col-home-l {
+        width: 100% !important;
+        margin-left: 0 !important;
+        padding-bottom: 0 !important;
+        padding-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    html[lang="ar"] .text-right {
+        text-align: center !important;
+    }
+    html[lang="ar"] .tm-post-link {
+        text-align: center !important;
+    }
+    html[lang="ar"] .media {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 15px !important;
+        background: transparent !important;
+    }
+    html[lang="ar"] .tm-text-container {
+        background: transparent !important;
+    }
+    address {
+        white-space: pre-line; /* Preserves \n as line breaks */
+    }
+    .tm-col-home-l {
+        width: 100% !important;
+        margin-left: 0 !important;
+        padding-bottom: 0 !important;
+        padding-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    .tm-row-home {
+        margin-bottom: -270px !important;
+    }
+    .tm-img-home-container {
+        margin-top: -270px !important;
+    }
+    .media {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 15px !important;
+        background: transparent !important;
+    }
+    .media-body {
+        margin-top: 0 !important;
+    }
+    .tm-post-link {
+        margin-bottom: 15px !important;
+    }
+    .tm-text-container {
+        background: transparent !important;
+        text-align: center !important;
+    }
+    .tm-text-container p {
+        text-align: center !important;
+    }
+    .text-right {
+        text-align: center !important;
+        margin-top: 30px !important;
+    }
+    .tm-post-icon {
+        display: block;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-bottom: -20px !important;
+        width: 100px;
+        height: 100px;
+    }
+    .tm-icon-container {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-bottom: 24px !important;
+        text-align: center !important;
+        border: none !important;
+        background: transparent !important;
+    }
+    .tm-icon-container p {
+        text-align: center !important;
+    }
+    [data-theme="dark"] p {
+        color: #a0a0a0 !important;
+    }
+    #gallery {
+        margin-bottom: -130px !important;
+    }
+    .tm-gallery figure {
+        width: 23% !important;
+        min-width: 200px !important;
+        max-width: 100% !important;
+        overflow: hidden;
+    }
+    .tm-gallery figure img {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        position: relative !important;
+        transform: translateY(-32%) !important;
+    }
+    figure.effect-honey img {
+        transform: translateY(-32%) !important;
+    }
+    .tm-copyright {
+        background: #0a1628 !important;
+        color: white;
+        padding: 30px 70px 50px 0 !important;
+        position: relative;
+    }
+    .tm-copyright::before {
+        content: '';
+        position: absolute;
+        left: -470px;
+        top: 0;
+        bottom: 0;
+        width: 470px;
+        background: #0a1628;
+    }
+    .media:first-of-type .tm-post-icon {
+        margin-top: 15px !important;
+        margin-bottom: -15px !important;
+    }
+    .media:nth-of-type(2) .tm-post-icon {
+        margin-bottom: -25px !important;
+    }
+    .media:nth-of-type(3) .tm-post-icon {
+        margin-top: 10px !important;
+        margin-bottom: -25px !important;
+    }
+    </style>
+</head>
+<body data-theme="light" dir="ltr">
+    <div class="tm-floating-icons">
+        <div style="position: relative;">
+            <div class="tm-icon-btn" id="langToggle">
+                <i class="fas fa-globe"></i>
+            </div>
+            <div class="tm-lang-menu" id="langMenu">
+                <div class="tm-lang-option" data-lang="fr">
+                    🇫🇷 Français
+                </div>
+                <div class="tm-lang-option" data-lang="en">
+                    🇬🇧 English
+                </div>
+                <div class="tm-lang-option" data-lang="ar">
+                    🇲🇦 العربية
+                </div>
+            </div>
+        </div>
+        <div class="tm-icon-btn" id="themeToggle">
+            <i class="fas fa-moon"></i>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div id="tm-sidebar" class="tm-sidebar"> 
+                <nav class="tm-nav">
+                    <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div>
+                        <div class="tm-brand-box">
+                            <img src="img/agadir.png" alt="Soins Agadir Center" class="tm-brand-logo" style="max-height: 150px; width: auto;">
+                        </div>                
+                        <ul id="tm-main-nav">
+                            <li class="nav-item">                                
+                                <a href="#home" class="nav-link current">
+                                    <div class="triangle-right"></div>
+                                    <i class="fas fa-home nav-icon"></i>
+                                    <span data-key="nav_home">Home</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#gallery" class="nav-link">
+                                    <div class="triangle-right"></div>
+                                    <i class="fas fa-images nav-icon"></i>
+                                    <span data-key="nav_gallery">Gallery</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#about" class="nav-link">
+                                    <div class="triangle-right"></div>
+                                    <i class="fas fa-user-friends nav-icon"></i>
+                                    <span data-key="nav_about">About</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#contact" class="nav-link">
+                                    <div class="triangle-right"></div>
+                                    <i class="fas fa-envelope nav-icon"></i>
+                                    <span data-key="nav_contact">Contact</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://www.instagram.com/soins.agadir.center" class="nav-link external" target="_blank">
+                                    <div class="triangle-right"></div>
+                                    <i class="fas fa-external-link-alt nav-icon"></i>
+                                    Instagram
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="tm-main">
+                <div class="tm-section-wrap">
+                    <div class="tm-parallax" data-parallax="scroll" data-image-src="img/img-01.jpg"></div>                   
+                    <section id="home" class="tm-section">
+                        <h2 class="tm-text-primary" data-key="welcome">Welcome to Soins Agadir Center</h2>
+                        <hr class="mb-5">
+                        <div class="row">
+                            <div class="col-lg-6 tm-col-home mb-4">
+                                <div class="tm-text-container">
+                                    <div class="tm-icon-container mb-5 mr-0 ml-auto">
+                                        <i class="fas fa-clinic-medical fa-4x tm-text-primary"></i>
+                                    </div>                                
+                                    <p data-key="home_p1">
+                                        Your trusted nursing and medical care center in Agadir. We provide professional home care, 
+                                        injections, wound care, and aesthetic treatments with certified medical staff.
+                                    </p>
+                                    <p data-key="home_p2">
+                                        Located at 94, Rue El Farabi, Bloc E8, Cité Dakhla, Agadir, we are here to support your health 
+                                        and well-being with personalized, high-quality care.
+                                    </p>
+                                </div>                                
+                            </div>
+                            <div class="col-lg-6 tm-col-home mb-4">
+                                <div class="tm-text-container">
+                                    <div class="tm-icon-container mb-5 mr-0 ml-auto">
+                                        <i class="fas fa-heartbeat fa-4x tm-text-primary"></i>
+                                    </div>                                 
+                                    <p data-key="home_p3">
+                                        Our team of qualified nurses and doctors ensures safe, effective, and compassionate care 
+                                        tailored to your needs — whether at home or in our modern clinic.
+                                    </p>
+                                    <div class="text-right">
+                                        <a href="#gallery" class="btn btn-primary tm-btn-next" data-key="btn_services">View Our Services</a>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="tm-hr-short mb-5">
+                        <div class="row tm-row-home">                            
+                            <div class="tm-col-home tm-col-home-l">
+                                <div class="media mb-4">
+                                    <i class="fas fa-syringe fa-4x tm-post-icon tm-text-primary"></i>
+                                    <div class="media-body">
+                                        <a href="#" class="d-block mb-2 tm-text-primary tm-post-link" data-key="service_injection">Home Injections</a>  
+                                        <p data-key="service_injection_desc">
+                                            Professional administration of injections, IV therapy, and medication at your home. 
+                                            Safe, sterile, and on-demand service available 24/7.
+                                        </p>
+                                    </div>                                    
+                                </div>
+                                <div class="media mb-4">
+                                    <i class="fas fa-band-aid fa-4x tm-post-icon tm-text-primary"></i>
+                                    <div class="media-body">
+                                        <a href="#" class="d-block mb-2 tm-text-primary tm-post-link" data-key="service_wound">Wound Care & Dressing</a>  
+                                        <p data-key="service_wound_desc">
+                                            Expert treatment for post-surgical wounds, diabetic ulcers, burns, and chronic injuries. 
+                                            We use advanced materials for faster healing.
+                                        </p>
+                                    </div>                                    
+                                </div>
+                                <div class="media mb-4">
+                                    <i class="fas fa-spa fa-4x tm-post-icon tm-text-primary"></i>
+                                    <div class="media-body">
+                                        <a href="#" class="d-block mb-2 tm-text-primary tm-post-link" data-key="service_aesthetic">Hydrafacial & PRP</a>  
+                                        <p data-key="service_aesthetic_desc">
+                                            Rejuvenate your skin with non-invasive Hydrafacial and PRP hair/skin treatments. 
+                                            Natural glow and hair regrowth with proven results.
+                                        </p>
+                                    </div>                                    
+                                </div>
+                            </div>
+                            <div class="tm-col-home mr-0 ml-auto">
+                                <div class="tm-img-home-container"></div>                                
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="tm-section-wrap">
+                    <div class="tm-parallax" data-parallax="scroll" data-image-src="img/img-02.jpg"></div>                   
+                    <section id="gallery" class="tm-section">
+                        <h2 class="tm-text-primary" data-key="gallery_title">Our Services & Treatments</h2>
+                        <hr class="mb-5">
+                        <ul class="tm-gallery-links">
+                            <li>
+                                <a href="javascript:void(0);" class="active tm-gallery-link" data-filter="*">
+                                    <i class="fas fa-layer-group tm-gallery-link-icon"></i>
+                                    <span data-key="filter_all">All</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="tm-gallery-link" data-filter="home-care">
+                                    <i class="fas fa-home tm-gallery-link-icon"></i>
+                                    <span data-key="filter_home">Home Care</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="tm-gallery-link" data-filter="aesthetic">
+                                    <i class="fas fa-spa tm-gallery-link-icon"></i>
+                                    <span data-key="filter_aesthetic">Aesthetic</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="tm-gallery-link" data-filter="clinical">
+                                    <i class="fas fa-clinic-medical tm-gallery-link-icon"></i>
+                                    <span data-key="filter_clinical">Clinical</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tm-gallery">
+                            <figure class="effect-honey tm-gallery-item home-care">
+                                <img src="img/gallery/delux.jpg" alt="Image"/>
+                                <figcaption>
+                                    <h2><i data-key="gal_delux">Delux Package</i></h2>
+                                    <a href="img/gallery/delux.jpg"><i data-key="view_more">View more</i></a>						
+                                </figcaption>			
+                            </figure>
+                            <figure class="effect-honey tm-gallery-item aesthetic">
+                                <img src="img/gallery/eclat.jpg" alt="Image"/>
+                                <figcaption>
+                                    <h2><i data-key="gal_eclat">Eclat Treatment</i></h2>
+                                    <a href="img/gallery/eclat.jpg"><i data-key="view_more">View more</i></a>						
+                                </figcaption>			
+                            </figure>  
+                            <figure class="effect-honey tm-gallery-item clinical">
+                                <img src="img/gallery/express.jpg" alt="Image"/>
+                                <figcaption>
+                                    <h2><i data-key="gal_express">Express Care</i></h2>
+                                    <a href="img/gallery/express.jpg"><i data-key="view_more">View more</i></a>						
+                                </figcaption>			
+                            </figure>
+                            <figure class="effect-honey tm-gallery-item aesthetic">
+                                <img src="img/gallery/prestigieux.jpg" alt="Image"/>
+                                <figcaption>
+                                    <h2><i data-key="gal_prestigieux">Prestigious Package</i></h2>
+                                    <a href="img/gallery/prestigieux.jpg"><i data-key="view_more">View more</i></a>						
+                                </figcaption>			
+                            </figure>
+                            <figure class="effect-honey tm-gallery-item home-care">
+                                <img src="img/gallery/pro.jpg" alt="Image"/>
+                                <figcaption>
+                                    <h2><i data-key="gal_pro">Professional Care</i></h2>
+                                    <a href="img/gallery/pro.jpg"><i data-key="view_more">View more</i></a>						
+                                </figcaption>			
+                            </figure> 
+                            <figure class="effect-honey tm-gallery-item aesthetic">
+                                <img src="img/gallery/therapie.jpg" alt="Image"/>
+                                <figcaption>
+                                    <h2><i data-key="gal_therapie">Therapy Beauty</i></h2>
+                                    <a href="img/gallery/therapie.jpg"><i data-key="view_more">View more</i></a>						
+                                </figcaption>			
+                            </figure>
+                            <figure class="effect-honey tm-gallery-item clinical">
+                                <img src="img/gallery/tonus.jpg" alt="Image"/>
+                                <figcaption>
+                                    <h2><i data-key="gal_tonus">Wellness Clinic</i></h2>
+                                    <a href="img/gallery/tonus.jpg"><i data-key="view_more">View more</i></a>						
+                                </figcaption>			
+                            </figure>
+                        </div>
+                    </section>
+                </div>
+                <div class="tm-section-wrap">
+                    <div class="tm-parallax" data-parallax="scroll" data-image-src="img/img-03.jpg"></div>
+                    <section id="about" class="tm-section">
+                        <h2 class="tm-text-primary" data-key="about_title">About Soins Agadir Center</h2>
+                        <hr class="mb-5">
+                        <div class="row tm-row-about">
+                            <div class="tm-col-about tm-col-about-l">
+                                <p class="mb-4" data-key="about_p1">
+                                    Established in the heart of Agadir, Soins Agadir Center is a leading nursing and aesthetic care facility 
+                                    dedicated to providing exceptional medical services both in-clinic and at home.
+                                </p>
+                                <p class="mb-4" data-key="about_p2">
+                                    Our team consists of licensed nurses, certified aesthetic specialists, and supervising physicians 
+                                    who follow strict medical protocols to ensure patient safety and satisfaction.
+                                </p>
+                                <p class="mb-4" data-key="about_p3">
+                                    We specialize in home nursing, post-operative care, chronic disease management, and advanced 
+                                    aesthetic treatments using state-of-the-art technology and medical-grade products.
+                                </p>
+                            </div>
+                            <div class="tm-col-about tm-col-about-r">
+                                <img src="img/img-about-01.jpg" alt="Image" class="img-fluid mb-5 tm-img-about">
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <div class="tm-carousel">
+                                <div class="tm-carousel-item">
+                                    <figure class="effect-honey mb-4">
+                                        <img src="img/staff1.jpg" alt="Image">
+                                        <figcaption>
+                                            <ul class="tm-social">
+                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
+                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
+                                            </ul>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="tm-about-text">
+                                        <h3 class="mb-3 tm-text-primary tm-about-title" data-key="team_2_name">Nadia Benali</h3>
+                                        <p data-key="team_2_desc">Head Nurse with expertise in home care, wound management, and patient education. Fluent in Arabic, French, and English.</p>
+                                        <h4 class="tm-text-secondary tm-about-subtitle" style="margin-top: 20px; text-align: center;" data-key="team_2_role">Director</h4>
+                                    </div>
+                                </div>
+                                <div class="tm-carousel-item">
+                                    <figure class="effect-honey mb-4">
+                                        <img src="img/staff2.jpg" alt="Image">
+                                        <figcaption>
+                                            <ul class="tm-social">
+                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
+                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
+                                            </ul>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="tm-about-text">
+                                        <h3 class="mb-3 tm-text-primary tm-about-title" data-key="team_3_name">Khalid Mansouri</h3>
+                                        <p data-key="team_3_desc">Certified Aesthetic Specialist trained in Hydrafacial, microneedling, and laser treatments. Focus on natural results.</p>
+                                        <h4 class="tm-text-secondary tm-about-subtitle" style="margin-top: 20px; text-align: center;" data-key="team_3_role">Aesthetic Specialist</h4>
+                                    </div>
+                                </div>
+                                <div class="tm-carousel-item">
+                                    <figure class="effect-honey mb-4">
+                                        <img src="img/staff5.jpg" alt="Image">
+                                        <figcaption>
+                                            <ul class="tm-social">
+                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
+                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
+                                            </ul>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="tm-about-text">
+                                        <h3 class="mb-3 tm-text-primary tm-about-title" data-key="team_4_name">Fatima Zahra</h3>
+                                        <p data-key="team_4_desc">Senior Nurse specializing in diabetic care, IV therapy, and post-surgical recovery. Known for her gentle approach.</p>
+                                        <h4 class="tm-text-secondary tm-about-subtitle" style="margin-top: 50px; text-align: center;" data-key="team_4_role">Senior Nurse</h4>
+                                    </div>
+                                </div>
+                                <div class="tm-carousel-item">
+                                    <figure class="effect-honey mb-4">
+                                        <img src="img/staff4.jpg" alt="Image">
+                                        <figcaption>
+                                            <ul class="tm-social">
+                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
+                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
+                                            </ul>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="tm-about-text">
+                                        <h3 class="mb-3 tm-text-primary tm-about-title" data-key="team_5_name">Sara Lahlou</h3>
+                                        <p data-key="team_5_desc">Clinic Coordinator ensuring smooth operations, appointment scheduling, and patient follow-up with care.</p>
+                                        <h4 class="tm-text-secondary tm-about-subtitle" style="margin-top: 50px; text-align: center;" data-key="team_5_role">Clinic Coordinator</h4>
+                                    </div>
+                                </div>
+                                <div class="tm-carousel-item">
+                                    <figure class="effect-honey mb-4">
+                                        <img src="img/staff3.jpg" alt="Image">
+                                        <figcaption>
+                                            <ul class="tm-social">
+                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
+                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
+                                            </ul>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="tm-about-text">
+                                        <h3 class="mb-3 tm-text-primary tm-about-title" data-key="team_6_name">Omar Tazi</h3>
+                                        <p data-key="team_6_desc">Logistics and Home Visit Supervisor. Ensures timely, safe, and fully equipped medical visits across Agadir.</p>
+                                        <h4 class="tm-text-secondary tm-about-subtitle" style="margin-top: 30px; text-align: center;" data-key="team_6_role">Home Care Supervisor</h4>
+                                    </div>
+                                </div>
+                                <div class="tm-carousel-item">
+                                    <figure class="effect-honey mb-4">
+                                        <img src="img/staff6.jpg" alt="Image">
+                                        <figcaption>
+                                            <ul class="tm-social">
+                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
+                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
+                                            </ul>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="tm-about-text">
+                                        <h3 class="mb-3 tm-text-primary tm-about-title" data-key="team_7_name">Laila Idrissi</h3>
+                                        <p data-key="team_7_desc">PRP and Hair Restoration Expert. Helped hundreds regain confidence with natural hair regrowth treatments.</p>
+                                        <h4 class="tm-text-secondary tm-about-subtitle" style="margin-top: 50px; text-align: center;" data-key="team_7_role">PRP Specialist</h4>
+                                    </div>
+                                </div>
+                                <div class="tm-carousel-item">
+                                    <figure class="effect-honey mb-4">
+                                        <img src="img/staff8.jpg" alt="Image">
+                                        <figcaption>
+                                            <ul class="tm-social">
+                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
+                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
+                                            </ul>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="tm-about-text">
+                                        <h3 class="mb-3 tm-text-primary tm-about-title" data-key="team_8_name">Youssef Alami</h3>
+                                        <p data-key="team_8_desc">IT and Digital Health Manager. Implements teleconsultation and digital patient records for better care.</p>
+                                        <h4 class="tm-text-secondary tm-about-subtitle" style="margin-top: 30px; text-align: center;" data-key="team_8_role">Digital Health Manager</h4>
+                                    </div>
+                                </div>
+                                <div class="tm-carousel-item">
+                                    <figure class="effect-honey mb-4">
+                                        <img src="img/staff7.jpg" alt="Image">
+                                        <figcaption>
+                                            <ul class="tm-social">
+                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
+                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
+                                            </ul>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="tm-about-text">
+                                        <h3 class="mb-3 tm-text-primary tm-about-title" data-key="team_9_name">Hajar Bennani</h3>
+                                        <p data-key="team_9_desc">Patient Relations Officer. Your first point of contact for appointments, inquiries, and support.</p>
+                                        <h4 class="tm-text-secondary tm-about-subtitle" style="margin-top: 50px; text-align: center;" data-key="team_9_role">Patient Relations</h4>
+                                    </div>
+                                </div>
+                                <div class="tm-carousel-item">
+                                    <figure class="effect-honey mb-4">
+                                        <img src="img/staff9.jpg" alt="Image">
+                                        <figcaption>
+                                            <ul class="tm-social">
+                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
+                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
+                                            </ul>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="tm-about-text">
+                                        <h3 class="mb-3 tm-text-primary tm-about-title" data-key="team_10_name">Mehdi Rahali</h3>
+                                        <p data-key="team_10_desc">Pharmacy and Supplies Manager. Ensures all medical materials are authentic, sterile, and up to standard.</p>
+                                        <h4 class="tm-text-secondary tm-about-subtitle" style="margin-top: 50px; text-align: center;" data-key="team_10_role">Medical Supplies</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="tm-section-wrap">
+                    <div class="tm-parallax" data-parallax="scroll" data-image-src="img/img-04.jpg"></div>
+                    <div id="contact" class="tm-section">
+                        <h2 class="tm-text-primary" data-key="contact_title">Contact Upright</h2>
+                        <hr class="mb-5">
+                        <div class="row">
+                            <div class="col-xl-6 tm-contact-col-l mb-4">
+                                <form id="contact-form" action="" method="POST" class="tm-contact-form">
+                                    <div class="form-group">
+                                        <input type="text" name="name" class="form-control rounded-0" placeholder="Name" data-key="form_name" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" name="email" class="form-control rounded-0" placeholder="Email" data-key="form_email" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <select class="form-control" id="contact-select" name="inquiry">
+                                            <option value="-" data-key="form_service">Subject</option>
+                                            <option value="sales" data-key="opt_sales">Sales &amp; Marketing</option>
+                                            <option value="creative" data-key="opt_creative">Creative Design</option>
+                                            <option value="uiux" data-key="opt_uiux">UI / UX</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea rows="15" name="message" class="form-control rounded-0" placeholder="Message" data-key="form_message" required></textarea>
+                                    </div>
+                                    <div class="form-group tm-text-right">
+                                        <button type="submit" class="btn btn-primary" data-key="form_send">Send</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-xl-6 tm-contact-col-r">
+                                <div class="mapouter mb-4">
+                                    <div class="gmap_canvas">
+                                        <iframe width="100%" height="520" id="gmap_canvas"
+                                            src="https://maps.google.com/maps?q=94+Rue+El+Farabi+Cite+Dakhla+Agadir+Morocco&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                                    </div>
+                                </div>
+                                <address class="mb-4" data-key="contact_address">94, Rue El Farabi, Bloc E8, Cité Dakhla, Agadir, Morocco 80000<br><br>Opening Hours:<br><br>* Monday – Friday: 8:30 AM – 8:30 PM<br><br>* Saturday: Closed<br><br>* Sunday: 8:30 AM – 8:30 PM</address>
+                                <ul class="tm-contact-links mb-4">
+                                    <li class="mb-2">
+                                        <a href="tel:+212612345678">
+                                            <i class="fas fa-phone mr-2 tm-contact-link-icon"></i>
+                                            Tel: +212 6 12 34 56 78
+                                        </a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a href="tel:+212528301234">
+                                            <i class="fas fa-phone-alt mr-2 tm-contact-link-icon"></i>
+                                            Fix: +212 5 28 30 12 34
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="mailto:contact@soinsagadircenter.com">
+                                            <i class="fas fa-at mr-2 tm-contact-link-icon"></i>
+                                            Email: contact@soinsagadircenter.com
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="tm-contact-social">
+                                    <li><a href="https://instagram.com/soins.agadir.center" class="tm-social-link" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="https://facebook.com/soinsagadircenter" class="tm-social-link" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                                    <li><a href="https://wa.me/212612345678" class="tm-social-link" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tm-section-wrap tm-copyright row">
+                    <div class="col-12">
+                        <div class="text-right">
+                            <div class="mb-3">
+                                <a href="#privacy" class="tm-footer-link" style="color: inherit; text-decoration: none; margin-right: 20px;"><i data-key="privacy_policy">Privacy Policy</i></a>
+                                <a href="#terms" class="tm-footer-link" style="color: inherit; text-decoration: none; margin-right: 20px;"><i data-key="terms_service">Terms of Service</i></a>
+                                <a href="#data-protection" class="tm-footer-link" style="color: inherit; text-decoration: none;"><i data-key="data_protection">Data Protection</i></a>
+                            </div>
+                            © 2025 <span data-key="copyright">Soins Agadir Center</span>
+                        </div> 
+                    </div>
+                </div>                 
+            </div> <!-- .tm-main -->                      
+        </div> <!-- .row -->
+    </div> <!-- .container-fluid -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.singlePageNav.min.js"></script>
+    <script src="js/parallax/parallax.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="js/templatemo-script.js"></script>
+    <script>
+    let translations;
+        fetch('translations.json')
+           .then(response => response.json())
+            .then(data => {
+                translations = data;
+               // Apply the default language after loading
+              const currentLang = localStorage.getItem("lang") || "en";
+                applyLanguage(currentLang);
+            })
+            .catch(error => console.error('Error loading translations:', error));
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const langToggle = document.getElementById("langToggle");
+            const langMenu = document.getElementById("langMenu");
+          const themeToggle = document.getElementById("themeToggle");
+          
+          // Re-apply language on DOMContentLoaded to ensure all elements are translated
+          const currentLang = localStorage.getItem("lang") || "en";
+          if (translations) {
+              applyLanguage(currentLang);
+          }
+
+          langToggle.addEventListener("click", () => {
+            langMenu.classList.toggle("show");
+        });
+
+        document.querySelectorAll(".tm-lang-option").forEach(opt => {
+            opt.addEventListener("click", () => {
+                const lang = opt.dataset.lang;
+                localStorage.setItem("lang", lang);
+                // Apply language with a small delay to ensure all elements are ready
+                setTimeout(() => applyLanguage(lang), 10);
+                langMenu.classList.remove("show");
+            });
+        });
+
+        document.addEventListener("click", (e) => {
+            if (!langToggle.contains(e.target) && !langMenu.contains(e.target)) {
+                langMenu.classList.remove("show");
+            }
+        });
+
+        const savedTheme = localStorage.getItem("theme") || "light";
+        document.body.setAttribute("data-theme", savedTheme);
+        updateThemeIcon(savedTheme);
+
+        themeToggle.addEventListener("click", () => {
+            const newTheme = document.body.getAttribute("data-theme") === "light" ? "dark" : "light";
+            document.body.setAttribute("data-theme", newTheme);
+            localStorage.setItem("theme", newTheme);
+            updateThemeIcon(newTheme);
+        });
+
+        function updateThemeIcon(theme) {
+            themeToggle.innerHTML = theme === "dark" ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        }
+
+        function applyLanguage(lang) {
+            if (!translations) return; // Wait for JSON to load if not ready
+
+            // Update all elements with data-key attribute
+            document.querySelectorAll("[data-key]").forEach(el => {
+                const key = el.dataset.key;
+                if (translations[lang] && translations[lang][key]) {
+                    // For <i> tags inside <h2> or other elements, just update the text content
+                    el.textContent = translations[lang][key];
+                }
+            });
+
+            document.documentElement.lang = lang;
+            // Always keep LTR direction to avoid layout changes
+            document.body.style.direction = "ltr";
+            
+            // Force a re-render to ensure changes are visible
+            document.body.offsetHeight;
+        }
+    });
+
+    // Legal pages functionality
+    function showLegalPage(pageId) {
+        const modal = document.createElement('div');
+        modal.id = pageId;
+        modal.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10000; overflow-y: auto; padding: 20px 0;';
+        
+        const currentLang = localStorage.getItem("lang") || "en";
+        let title = '';
+        
+        // Get translated title if translations are available
+        if (translations) {
+            if (pageId === 'privacy') {
+                title = translations[currentLang]['privacy_policy'] || 'Privacy Policy';
+            } else if (pageId === 'terms') {
+                title = translations[currentLang]['terms_service'] || 'Terms of Service';
+            } else if (pageId === 'data-protection') {
+                title = translations[currentLang]['data_protection'] || 'Data Protection';
+            }
+        } else {
+            // Fallback if translations not loaded
+            if (pageId === 'privacy') title = 'Privacy Policy';
+            else if (pageId === 'terms') title = 'Terms of Service';
+            else if (pageId === 'data-protection') title = 'Data Protection';
+        }
+        
+        let content = '';
+        if (pageId === 'privacy') {
+            content = `
+                <div style="background: white; max-width: 900px; margin: 20px auto; padding: 40px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); position: relative;">
+                    <button onclick="document.getElementById('${pageId}').remove()" style="position: absolute; top: 15px; right: 15px; background: none; border: none; font-size: 28px; cursor: pointer; color: #666;">&times;</button>
+                    <h1>${title}</h1>
+                    <p style="color: #666; font-style: italic; margin-bottom: 30px;">Last Updated: November 2025</p>
+                    
+                    <h2>1. Introduction</h2>
+                    <p>Soins Agadir Center ("we", "us", "our" or "Company") is committed to protecting your privacy and ensuring you have a positive experience on our website and when receiving our services. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our medical services.</p>
+                    
+                    <h2>2. Information We Collect</h2>
+                    <p>We may collect information about you in a variety of ways. The information we may collect on the site includes:</p>
+                    <ul>
+                        <li><strong>Personal Data:</strong> Name, email address, telephone number, postal address, date of birth</li>
+                        <li><strong>Medical Information:</strong> Medical history, health concerns, allergies, current medications (provided voluntarily through contact forms)</li>
+                        <li><strong>Technical Data:</strong> IP address, browser type, operating system, pages visited, time spent on pages</li>
+                        <li><strong>Cookie Data:</strong> Information stored through cookies and similar tracking technologies</li>
+                    </ul>
+                    
+                    <h2>3. How We Use Your Information</h2>
+                    <p>Soins Agadir Center uses the collected data for various purposes:</p>
+                    <ul>
+                        <li>To provide and maintain our medical services</li>
+                        <li>To notify you about changes to our services or policies</li>
+                        <li>To provide customer service and respond to your inquiries</li>
+                        <li>To gather analysis or valuable information so we can improve our services</li>
+                        <li>To monitor the usage of our website and services</li>
+                        <li>To detect, prevent and address technical and security issues</li>
+                        <li>To comply with legal obligations and medical regulations</li>
+                    </ul>
+                    
+                    <h2>4. Data Protection and Security</h2>
+                    <p>Soins Agadir Center implements appropriate technical and organizational measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. These measures include:</p>
+                    <ul>
+                        <li>SSL encryption for data transmission</li>
+                        <li>Restricted access to personal data by authorized personnel only</li>
+                        <li>Regular security audits and updates</li>
+                        <li>Compliance with medical data protection standards</li>
+                        <li>Secure data storage with multiple backups</li>
+                    </ul>
+                    
+                    <h2>5. Third-Party Disclosure</h2>
+                    <p>We do not sell, trade, or otherwise transfer your personally identifiable information to outside parties without your explicit consent, except as required by law. Trusted third parties who assist us in operating our website, conducting our business, or serving our patients may have access to your information under strict confidentiality agreements.</p>
+                    
+                    <h2>6. GDPR and Legal Compliance</h2>
+                    <p>If you are located in the European Union, you have the following rights under the General Data Protection Regulation (GDPR):</p>
+                    <ul>
+                        <li>Right to access your personal data</li>
+                        <li>Right to rectification of inaccurate data</li>
+                        <li>Right to erasure (right to be forgotten)</li>
+                        <li>Right to restrict processing</li>
+                        <li>Right to data portability</li>
+                        <li>Right to object to processing</li>
+                    </ul>
+                    
+                    <h2>7. Cookies and Tracking Technologies</h2>
+                    <p>We use cookies to enhance your experience on our website. You can choose to disable cookies through your browser settings, though this may affect certain website functionalities.</p>
+                    
+                    <h2>8. Data Retention</h2>
+                    <p>We retain personal data for as long as necessary to provide our services and fulfill the purposes outlined in this policy. Medical records are retained in accordance with legal requirements and best practices in healthcare.</p>
+                    
+                    <h2>9. Contact Us</h2>
+                    <p>If you have questions about this Privacy Policy, please contact us at:<br/>
+                    Email: contact@soinsagadircenter.com<br/>
+                    Phone: +212 6 12 34 56 78<br/>
+                    Address: 94, Rue El Farabi, Bloc E8, Cité Dakhla, Agadir, Morocco</p>
+                    
+                    <button onclick="document.getElementById('${pageId}').remove()" style="background: #0a7fb8; color: white; border: none; padding: 12px 30px; cursor: pointer; margin-top: 30px; border-radius: 5px; font-size: 16px;">Close</button>
+                </div>
+            `;
+        } else if (pageId === 'terms') {
+            content = `
+                <div style="background: white; max-width: 900px; margin: 20px auto; padding: 40px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); position: relative;">
+                    <button onclick="document.getElementById('${pageId}').remove()" style="position: absolute; top: 15px; right: 15px; background: none; border: none; font-size: 28px; cursor: pointer; color: #666;">&times;</button>
+                    <h1>${title}</h1>
+                    <p style="color: #666; font-style: italic; margin-bottom: 30px;">Last Updated: November 2025</p>
+                    
+                    <h2>1. Agreement to Terms</h2>
+                    <p>By accessing and using the Soins Agadir Center website and services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
+                    
+                    <h2>2. Use License</h2>
+                    <p>Permission is granted to temporarily download one copy of the materials (information or software) on Soins Agadir Center's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:</p>
+                    <ul>
+                        <li>Modify or copy the materials</li>
+                        <li>Use the materials for any commercial purpose or for any public display</li>
+                        <li>Attempt to decompile or reverse engineer any software contained on the website</li>
+                        <li>Remove any copyright or other proprietary notations from the materials</li>
+                        <li>Transfer the materials to another person or "mirror" the materials on any other server</li>
+                    </ul>
+                    
+                    <h2>3. Medical Disclaimer</h2>
+                    <p>The information provided on this website is for informational purposes only and does not constitute medical advice. Soins Agadir Center does not diagnose, treat, or provide medical advice through this website. Always consult with a qualified healthcare professional for any medical concerns. The use of this website does not establish a doctor-patient relationship.</p>
+                    
+                    <h2>4. Medical Services Terms</h2>
+                    <p>Our medical services are provided by licensed and certified healthcare professionals. While we strive to provide the highest quality care:</p>
+                    <ul>
+                        <li>We do not guarantee specific medical outcomes or results</li>
+                        <li>Individual results may vary based on patient factors and compliance</li>
+                        <li>Patients must provide accurate and complete medical history</li>
+                        <li>Patients must follow all medical advice and treatment protocols</li>
+                        <li>Contraindications and allergies must be disclosed to medical staff</li>
+                    </ul>
+                    
+                    <h2>5. Appointment and Cancellation Policy</h2>
+                    <p><strong>Booking:</strong> Appointments must be booked through our contact form or by phone.<br/>
+                    <strong>Cancellation:</strong> Cancellations must be made at least 24 hours in advance. Cancellations made less than 24 hours before the appointment may incur a cancellation fee.<br/>
+                    <strong>No-Show:</strong> Patients who fail to attend scheduled appointments without notice may be charged a no-show fee.</p>
+                    
+                    <h2>6. Patient Responsibilities</h2>
+                    <ul>
+                        <li>Arrive on time for appointments</li>
+                        <li>Provide accurate medical and personal information</li>
+                        <li>Follow medical instructions and treatment plans</li>
+                        <li>Inform staff of any adverse reactions or complications</li>
+                        <li>Maintain respect and professionalism with medical staff</li>
+                    </ul>
+                    
+                    <h2>7. Limitation of Liability</h2>
+                    <p>In no event shall Soins Agadir Center or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Soins Agadir Center's website or services, even if we or an authorized representative has been notified orally or in writing of the possibility of such damage.</p>
+                    
+                    <h2>8. Accuracy of Materials</h2>
+                    <p>The materials appearing on Soins Agadir Center's website could include technical, typographical, or photographic errors. Soins Agadir Center does not warrant that any of the materials on its website are accurate, complete, or current. Soins Agadir Center may make changes to the materials contained on its website at any time without notice.</p>
+                    
+                    <h2>9. Links and External Websites</h2>
+                    <p>Soins Agadir Center has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by Soins Agadir Center of the site. Use of any such linked website is at the user's own risk.</p>
+                    
+                    <h2>10. Modifications to Terms</h2>
+                    <p>Soins Agadir Center may revise these terms of service for its website at any time without notice. By using this website, you are agreeing to be bound by the then current version of these terms of service.</p>
+                    
+                    <h2>11. Governing Law</h2>
+                    <p>These terms and conditions are governed by and construed in accordance with the laws of Morocco, and you irrevocably submit to the exclusive jurisdiction of the courts in that location.</p>
+                    
+                    <button onclick="document.getElementById('${pageId}').remove()" style="background: #0a7fb8; color: white; border: none; padding: 12px 30px; cursor: pointer; margin-top: 30px; border-radius: 5px; font-size: 16px;">Close</button>
+                </div>
+            `;
+        } else if (pageId === 'data-protection') {
+            content = `
+                <div style="background: white; max-width: 900px; margin: 20px auto; padding: 40px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); position: relative;">
+                    <button onclick="document.getElementById('${pageId}').remove()" style="position: absolute; top: 15px; right: 15px; background: none; border: none; font-size: 28px; cursor: pointer; color: #666;">&times;</button>
+                    <h1>${title}</h1>
+                    <p style="color: #666; font-style: italic; margin-bottom: 30px;">Last Updated: November 2025</p>
+                    
+                    <h2>1. Commitment to Confidentiality</h2>
+                    <p>Soins Agadir Center is committed to maintaining the confidentiality of all patient information in accordance with international medical ethics standards and applicable healthcare regulations. Patient privacy is a fundamental right and cornerstone of our practice.</p>
+                    
+                    <h2>2. Medical Record Protection</h2>
+                    <p>All patient medical records, health information, and personal data are maintained in secure, controlled environments. Access to patient records is restricted to authorized medical personnel and support staff with a legitimate need to know for treatment, administration, or legal purposes.</p>
+                    
+                    <h2>3. Data Collection and Purpose</h2>
+                    <p>We collect patient data only for legitimate healthcare purposes including:</p>
+                    <ul>
+                        <li>Direct patient care and treatment provision</li>
+                        <li>Patient health assessment and medical history maintenance</li>
+                        <li>Appointment scheduling and medical follow-up</li>
+                        <li>Billing and insurance purposes (where applicable)</li>
+                        <li>Quality improvement and patient safety initiatives</li>
+                        <li>Legal and regulatory compliance</li>
+                    </ul>
+                    
+                    <h2>4. Data Security Measures</h2>
+                    <p>Soins Agadir Center implements comprehensive technical and organizational safeguards:</p>
+                    <ul>
+                        <li>SSL/TLS encryption for all data transmission</li>
+                        <li>Secure servers with firewall protection</li>
+                        <li>Regular security audits and penetration testing</li>
+                        <li>Access controls and role-based permissions</li>
+                        <li>Automatic data backups with redundancy</li>
+                        <li>Regular software updates and security patches</li>
+                        <li>Incident response and breach notification procedures</li>
+                    </ul>
+                    
+                    <h2>5. GDPR Compliance</h2>
+                    <p>For patients in the European Union, we fully comply with the General Data Protection Regulation (GDPR). This includes:</p>
+                    <ul>
+                        <li><strong>Data Subject Rights:</strong> Patients have the right to access, correct, port, and request deletion of their personal data</li>
+                        <li><strong>Lawful Basis:</strong> Processing is based on medical necessity and explicit patient consent</li>
+                        <li><strong>Data Protection Officer:</strong> Contact details available upon request</li>
+                        <li><strong>International Transfer:</strong> Any international data transfer is done with appropriate safeguards</li>
+                        <li><strong>Breach Notification:</strong> We notify patients of any security breaches within 72 hours as required</li>
+                    </ul>
+                    
+                    <h2>6. Limitations on Disclosure</h2>
+                    <p>Patient information is not disclosed to third parties without explicit patient consent, except:</p>
+                    <ul>
+                        <li>To healthcare providers involved in patient care</li>
+                        <li>To insurance companies for billing purposes (with patient authorization)</li>
+                        <li>To family members or legal guardians as appropriate</li>
+                        <li>When required by law or court order</li>
+                        <li>In medical emergencies where patient safety is at risk</li>
+                        <li>For public health purposes as required by law</li>
+                    </ul>
+                    
+                    <h2>7. Data Retention Policy</h2>
+                    <p>Medical records are retained for a minimum of 10 years from the date of last treatment in accordance with healthcare regulations. Patients may request access to their records at any time. Upon patient request, records may be transferred to another healthcare provider in a secure manner.</p>
+                    
+                    <h2>8. Patient Access and Correction Rights</h2>
+                    <p>Patients have the right to:</p>
+                    <ul>
+                        <li>Access their complete medical records</li>
+                        <li>Request correction of inaccurate information</li>
+                        <li>Obtain copies of their medical records</li>
+                        <li>Request an accounting of disclosures</li>
+                        <li>File complaints regarding privacy violations</li>
+                    </ul>
+                    
+                    <h2>9. Special Sensitive Data</h2>
+                    <p>We recognize that certain health information is particularly sensitive. Information related to HIV status, mental health treatment, substance abuse, or genetic information is handled with additional precautions and stricter confidentiality measures.</p>
+                    
+                    <h2>10. Staff Training and Accountability</h2>
+                    <p>All Soins Agadir Center staff members receive regular training on data protection, medical confidentiality, and patient privacy rights. Staff members sign confidentiality agreements and are held accountable for any breaches of patient privacy.</p>
+                    
+                    <h2>11. Contact for Privacy Concerns</h2>
+                    <p>If you have concerns about how your data is being handled or believe your privacy rights have been violated, please contact us immediately:<br/>
+                    Email: privacy@soinsagadircenter.com<br/>
+                    Phone: +212 6 12 34 56 78<br/>
+                    Address: 94, Rue El Farabi, Bloc E8, Cité Dakhla, Agadir, Morocco<br/>
+                    <br/>You also have the right to file a complaint with your local data protection authority.</p>
+                    
+                    <button onclick="document.getElementById('${pageId}').remove()" style="background: #0a7fb8; color: white; border: none; padding: 12px 30px; cursor: pointer; margin-top: 30px; border-radius: 5px; font-size: 16px;">Close</button>
+                </div>
+            `;
+        }
+        
+        modal.innerHTML = content;
+        document.body.appendChild(modal);
+        
+        // Close modal when clicking outside of it
+        modal.addEventListener('click', function(e) {
+            if (e.target === this) {
+                modal.remove();
+            }
+        });
+    }
+
+    // Add event listeners to footer links
+    document.querySelectorAll('.tm-footer-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const pageId = this.getAttribute('href').substring(1);
+            showLegalPage(pageId);
+        });
+    });
+</script>
+</body>
+</html>
